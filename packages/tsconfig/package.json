@@ -1,0 +1,14 @@
+{
+  "name": "@frontend-box/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "files": [
+    "base.json",
+    "vite.json",
+    "react-library.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
