@@ -31,7 +31,7 @@ module.exports = {
 ```bash
 module.exports = {
   extends: [
-    '@con/eslint-config-custom'
+    '@frontend-box/eslint-config-custom'
   ],
   rules: {
     // 여기에 커스텀 규칙을 추가합니다.
