@@ -10,14 +10,18 @@ Frontend-Box는 프론트엔드 개발을 위한 유용한 플러그인 및 도�
 
 #### 사용 방법
 
-```
-import { preloadImages } from '@frontend-box/image-preloader';
+```ts
+import { preloadImages } from "@frontend-box/image-preloader";
 
 const images = [
-  { png: 'path/to/image1.png' },
-  { avif: 'path/to/image2.avif', png: 'path/to/image2.png' },
-  { webp: 'path/to/image3.webp', png: 'path/to/image3.png' },
-  { avif: 'path/to/image4.avif', webp: 'path/to/image4.webp', png: 'path/to/image4.png' },
+  { png: "path/to/image1.png" },
+  { avif: "path/to/image2.avif", png: "path/to/image2.png" },
+  { webp: "path/to/image3.webp", png: "path/to/image3.png" },
+  {
+    avif: "path/to/image4.avif",
+    webp: "path/to/image4.webp",
+    png: "path/to/image4.png",
+  },
 ];
 
 preloadImages(images);
