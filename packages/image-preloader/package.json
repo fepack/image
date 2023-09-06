@@ -1,25 +1,33 @@
 {
   "name": "@frontend-box/image-preloader",
   "version": "0.0.0",
+  "type": "module",
   "description": "Image preloader for Frontend-Box",
+  "license": "MIT",
+  "author": "tooooo1",
   "keywords": [
     "frontend-box",
     "image",
     "preloader"
   ],
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/tooooo1/frontend-box.git",
     "directory": "packages/image-preloader"
   },
+  "sideEffects": false,
   "main": "dist/index.js",
-  "type": "module",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./package.json": "./package.json"
   },
@@ -28,9 +36,10 @@
     "src"
   ],
   "scripts": {
-    "build": "pnpm clean && pnpm build:tsc && pnpm build:js",
+    "build": "pnpm clean && pnpm build:tsc && pnpm build:js && pnpm copy:cts",
     "build:tsc": "tsc --emitDeclarationOnly",
     "build:js": "node ./esbuild.config.js",
+    "copy:cts": "cp dist/index.d.ts dist/index.d.cts",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
