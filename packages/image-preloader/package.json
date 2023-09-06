@@ -14,7 +14,7 @@
     "directory": "packages/image-preloader"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -29,8 +29,8 @@
   ],
   "scripts": {
     "build": "pnpm clean && pnpm build:tsc && pnpm build:js",
-    "build:tsc": "pnpm tsc --emitDeclarationOnly",
-    "build:js": "node build.js",
+    "build:tsc": "tsc --emitDeclarationOnly",
+    "build:js": "node ./esbuild.config.js",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
