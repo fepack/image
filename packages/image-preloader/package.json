@@ -40,10 +40,13 @@
     "build:tsc": "tsc --emitDeclarationOnly",
     "build:js": "node ./esbuild.config.js",
     "copy:cts": "cp dist/index.d.ts dist/index.d.cts",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "test": "vitest"
   },
   "devDependencies": {
     "@frontend-box/tsconfig": "workspace:*",
-    "esbuild": "^0.18.11"
+    "esbuild": "^0.18.11",
+    "jsdom": "^22.1.0",
+    "vitest": "^0.34.3"
   }
 }
