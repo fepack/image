@@ -1,5 +1,20 @@
 {
+  "name": "frontend-box",
   "private": true,
+  "keywords": [
+    "frontend-box",
+    "frontend"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tooooo1/frontend-box.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "demo/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
