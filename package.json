@@ -1,13 +1,13 @@
 {
-  "name": "frontend-box",
+  "name": "febox",
   "private": true,
   "keywords": [
-    "frontend-box",
+    "febox",
     "frontend"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tooooo1/frontend-box.git"
+    "url": "https://github.com/tooooo1/febox.git"
   },
   "license": "MIT",
   "type": "module",

@@ -1,5 +1,5 @@
 {
-  "extends": "@frontend-box/tsconfig/base.json",
+  "extends": "@febox/tsconfig/base.json",
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,

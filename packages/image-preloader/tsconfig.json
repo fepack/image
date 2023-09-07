@@ -1,5 +1,5 @@
 {
-  "extends": "@frontend-box/tsconfig/base.json",
+  "extends": "@febox/tsconfig/base.json",
   "exclude": ["node_modules"],
   "compilerOptions": {
     "declarationDir": "dist"

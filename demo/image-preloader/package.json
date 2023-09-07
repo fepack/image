@@ -1,5 +1,5 @@
 {
-  "name": "@frontend-box/demo-image-preloader",
+  "name": "@febox/demo-image-preloader",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@frontend-box/eslint-config-custom": "workspace:*",
-    "@frontend-box/tsconfig": "workspace:*",
+    "@febox/eslint-config-custom": "workspace:*",
+    "@febox/tsconfig": "workspace:*",
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "@frontend-box/image-preloader": "workspace:^"
+    "@febox/image-preloader": "workspace:^"
   }
 }

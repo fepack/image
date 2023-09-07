@@ -2,7 +2,7 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
-    name: "@frontend-box/image-preloader",
+    name: "@febox/image-preloader",
     dir: "./src",
     watch: false,
     environment: "jsdom",
