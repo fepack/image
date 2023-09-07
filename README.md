@@ -1,31 +1,16 @@
 # febox 🎁
 
-febox는 프론트엔드 개발을 위한 유용한 플러그인 및 도구들의 모음입니다. 이 패키지 모음은 효율적인 프론트엔드 개발을 돕기 위해 여러 작은 패키지들로 구성되어 있습니다.
+`febox`는 프론트엔드 개발을 위한 유용한 플러그인 및 도구들의 모음입니다. 이 패키지 모음은 효율적인 프론트엔드 개발을 돕기 위해 여러 작은 패키지들로 구성되어 있습니다.
 
-## 패키지
+프론트엔드 환경은 빠르게 발전하며, 이에 따라 다양한 도구와 라이브러리가 계속해서 등장합니다. 이런 툴들은 개발의 생산성을 크게 향상시키지만, 적절한 선택과 활용은 항상 쉽지 않습니다. `febox`는 이러한 복잡한 환경에서도 항상 일관된 가치를 제공하기 위해 만들어졌습니다.
 
-### 1. Image Preloader (@febox/image-preloader)
+시스템 개발에서는 변화와 안정성 사이에 종종 대립이 발생합니다. `febox`는 이런 대립을 인식하고 변화와 안정성 사이의 균형을 찾아나가고자 합니다. 필요에 따라 유연하게 대응하면서도 안정성을 유지하는 도구와 패키지의 선택이 핵심 목표입니다.
 
-이미지 프리로더는 웹페이지의 로딩 시간을 줄이기 위해 사용됩니다. 이 패키지는 웹페이지에 사용되는 이미지들을 미리 로드하고, AVIF, WEBP 및 PNG 이미지 포맷을 지원합니다.
+단순한 툴 모음 이상의 가치를 지니고 싶습니다. 프론트엔드 개발의 복잡성과 지속적인 변화에 대응하는 `febox`는 안정적이고 생산적인 개발을 지향합니다.
 
-#### 사용 방법
+## 패키지 목록
 
-```ts
-import { preloadImages } from "@febox/image-preloader";
-
-const images = [
-  { png: "path/to/image1.png" },
-  { avif: "path/to/image2.avif", png: "path/to/image2.png" },
-  { webp: "path/to/image3.webp", png: "path/to/image3.png" },
-  {
-    avif: "path/to/image4.avif",
-    webp: "path/to/image4.webp",
-    png: "path/to/image4.png",
-  },
-];
-
-preloadImages(images);
-```
+- [Image Preloader (@febox/image-preloader)](./Image-Preloader)
 
 ## 라이선스
 
