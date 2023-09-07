@@ -19,7 +19,9 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "type:check": "turbo run type:check --parallel"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
