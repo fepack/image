@@ -1,8 +1,27 @@
 function supportsImageFormat(format: string) {
-  const canvas = document.createElement("canvas");
-  return (
-    canvas.toDataURL(`image/${format}`).indexOf(`data:image/${format}`) === 0
-  );
+  const picture = document.createElement("picture");
+  const img = document.createElement("img");
+  const source = document.createElement("source");
+
+  switch (format) {
+    case "webp":
+      source.type = "image/webp";
+      break;
+    case "avif":
+      source.type = "image/avif";
+      break;
+    default:
+      return false;
+  }
+
+  picture.appendChild(source);
+  picture.appendChild(img);
+
+  document.body.appendChild(picture);
+  const isSupported = img.complete;
+  document.body.removeChild(picture);
+
+  return isSupported;
 }
 
 interface ImageSources {
@@ -27,4 +46,4 @@ function preloadImages(images: ImageSources[]) {
   });
 }
 
-export { preloadImages };
+export { preloadImages, supportsImageFormat };
