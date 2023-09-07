@@ -10,7 +10,7 @@
 
 ## 패키지 목록
 
-- [Image Preloader (@febox/image-preloader)](./Image-Preloader)
+- [Image Preloader (@febox/image-preloader)](https://github.com/tooooo1/febox/tree/main/packages/image-preloader)
 
 ## 라이선스
 
