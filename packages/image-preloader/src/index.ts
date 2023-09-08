@@ -1,18 +1,20 @@
 // https://developers.google.com/speed/webp/faq?hl=ko#in_your_own_javascript
 function checkWebPSupport(): Promise<boolean> {
   return new Promise((resolve) => {
-    const testImage = "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==";
-    const img = new Image();
+    const webpTestImage = "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==";
+    const webpCheckImageElement = new Image();
 
-    img.onload = () => {
-      resolve(img.width > 0 && img.height > 0);
+    webpCheckImageElement.onload = () => {
+      resolve(
+        webpCheckImageElement.width > 0 && webpCheckImageElement.height > 0
+      );
     };
 
-    img.onerror = () => {
+    webpCheckImageElement.onerror = () => {
       resolve(false);
     };
 
-    img.src = "data:image/webp;base64," + testImage;
+    webpCheckImageElement.src = "data:image/webp;base64," + webpTestImage;
   });
 }
 
