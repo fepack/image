@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@fepack/eslint-config-custom": "workspace:*",
+    "@fepack/eslint-config": "workspace:*",
     "@fepack/tsconfig": "workspace:*",
     "vite": "^4.4.5"
   },
