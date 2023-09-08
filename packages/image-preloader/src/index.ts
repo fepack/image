@@ -23,10 +23,10 @@ interface ImageSources {
   webp?: string;
 }
 
-async function preloadImages(images: ImageSources[]) {
+async function preloadImages(imageSources: ImageSources[]) {
   const webpIsSupported = await checkWebPSupport();
 
-  for (const image of images) {
+  for (const image of imageSources) {
     const selectedSource =
       webpIsSupported && image.webp ? image.webp : image.defaultSrc;
     const preloadedImageElement = new Image();
