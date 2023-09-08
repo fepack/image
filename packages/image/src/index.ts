@@ -1,5 +1,5 @@
 // https://developers.google.com/speed/webp/faq?hl=ko#in_your_own_javascript
-function checkWebPSupport(): Promise<boolean> {
+function isSupportWebP(): Promise<boolean> {
   return new Promise((resolve) => {
     const webpCheckImageElement = new Image();
 
@@ -19,16 +19,16 @@ interface ImageSource {
   webpSrc?: string;
 }
 
-async function preloadImages(images: ImageSource[]) {
-  const webpIsSupported = await checkWebPSupport();
+async function load(images: ImageSource[]) {
+  const isSupportedWebp = await isSupportWebP();
 
   for (const image of images) {
     const selectedSource =
-      webpIsSupported && image.webpSrc ? image.webpSrc : image.defaultSrc;
+      isSupportedWebp && image.webpSrc ? image.webpSrc : image.defaultSrc;
     const preloadedImageElement = new Image();
 
     preloadedImageElement.src = selectedSource;
   }
 }
 
-export { checkWebPSupport, preloadImages, type ImageSource };
+export { isSupportWebP, load, type ImageSource };

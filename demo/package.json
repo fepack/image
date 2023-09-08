@@ -1,5 +1,5 @@
 {
-  "name": "@febox/demo-image-preloader",
+  "name": "@febox/demo-image",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,6 +14,6 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "@febox/image-preloader": "workspace:^"
+    "@febox/image": "workspace:^"
   }
 }
