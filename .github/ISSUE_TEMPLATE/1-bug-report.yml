@@ -1,4 +1,4 @@
-name: febox 버그 레포트
+name: fepack 버그 레포트
 description: 문제 상황과 관련된 버그를 보고하는데 사용합니다.
 title: "bug: "
 labels: ["bug"]

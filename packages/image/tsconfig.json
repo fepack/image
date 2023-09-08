@@ -1,5 +1,5 @@
 {
-  "extends": "@febox/tsconfig/base.json",
+  "extends": "@fepack/tsconfig/base.json",
   "exclude": ["node_modules"],
   "compilerOptions": {
     "declarationDir": "dist"

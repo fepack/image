@@ -1,5 +1,5 @@
 {
-  "name": "@febox/demo-image",
+  "name": "@fepack/demo-image",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@febox/eslint-config-custom": "workspace:*",
-    "@febox/tsconfig": "workspace:*",
+    "@fepack/eslint-config-custom": "workspace:*",
+    "@fepack/tsconfig": "workspace:*",
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "@febox/image": "workspace:^"
+    "@fepack/image": "workspace:^"
   }
 }

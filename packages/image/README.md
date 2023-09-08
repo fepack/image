@@ -1,4 +1,4 @@
-# @febox/image
+# @fepack/image
 
 image는 웹페이지의 로딩 시간을 줄이기 위해 사용됩니다. 이 패키지는 웹페이지에 사용되는 이미지들을 미리 로드하며, WEBP 이미지 포맷을 지원합니다.
 
@@ -7,7 +7,7 @@ image는 웹페이지의 로딩 시간을 줄이기 위해 사용됩니다. 이 
 이 패키지를 사용하려면 먼저 프로젝트에 설치해야 합니다.
 
 ```
-pnpm add -D @febox/image
+pnpm add -D @fepack/image
 ```
 
 ## 기능
@@ -20,7 +20,7 @@ pnpm add -D @febox/image
 ### 이미지 포맷 지원 확인
 
 ```js
-import { isSupportWebP } from "@febox/image";
+import { isSupportWebP } from "@fepack/image";
 
 const isSupportedWebp = await isSupportWebP();
 if (isSupportedWebp) {
@@ -33,7 +33,7 @@ if (isSupportedWebp) {
 ### 이미지 로딩
 
 ```js
-import { load } from "@febox/image";
+import { load } from "@fepack/image";
 
 const images = [
   {

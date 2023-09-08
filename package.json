@@ -1,13 +1,13 @@
 {
-  "name": "febox",
+  "name": "fepack",
   "private": true,
   "keywords": [
-    "febox",
+    "fepack",
     "frontend"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tooooo1/febox.git"
+    "url": "https://github.com/tooooo1/fepack.git"
   },
   "license": "MIT",
   "type": "module",

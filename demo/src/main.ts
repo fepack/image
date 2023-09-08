@@ -1,4 +1,4 @@
-import { load } from "@febox/image";
+import { load } from "@fepack/image";
 
 const images = [
   { defaultSrc: "/options_resize.png" },
@@ -12,6 +12,6 @@ load(images);
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
-    <h1>@febox/demo-image</h1>
+    <h1>@fepack/demo-image</h1>
   </div>
 `;
