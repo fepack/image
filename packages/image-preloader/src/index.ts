@@ -1,49 +1,32 @@
-function supportsImageFormat(format: string) {
-  const picture = document.createElement("picture");
-  const img = document.createElement("img");
-  const source = document.createElement("source");
+// https://developers.google.com/speed/webp/faq?hl=ko#in_your_own_javascript
+function checkWebPSupport(callback: (result: boolean) => void) {
+  const testImage = "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==";
+  const img = new Image();
 
-  switch (format) {
-    case "webp":
-      source.type = "image/webp";
-      break;
-    case "avif":
-      source.type = "image/avif";
-      break;
-    default:
-      return false;
-  }
+  img.onload = () => {
+    callback(img.width > 0 && img.height > 0);
+  };
 
-  picture.appendChild(source);
-  picture.appendChild(img);
+  img.onerror = () => {
+    callback(false);
+  };
 
-  document.body.appendChild(picture);
-  const isSupported = img.complete;
-  document.body.removeChild(picture);
-
-  return isSupported;
+  img.src = "data:image/webp;base64," + testImage;
 }
 
 interface ImageSources {
-  png: string;
-  avif?: string;
+  defaultSrc: string;
   webp?: string;
 }
 
 function preloadImages(images: ImageSources[]) {
-  const supportsAvif = supportsImageFormat("avif");
-  const supportsWebp = supportsImageFormat("webp");
-
-  images.forEach((image) => {
-    const src =
-      supportsAvif && image.avif
-        ? image.avif
-        : supportsWebp && image.webp
-        ? image.webp
-        : image.png;
-    const img = new Image();
-    img.src = src;
+  checkWebPSupport((supportsWebp) => {
+    images.forEach((image) => {
+      const src = supportsWebp && image.webp ? image.webp : image.defaultSrc;
+      const img = new Image();
+      img.src = src;
+    });
   });
 }
 
-export { preloadImages, supportsImageFormat };
+export { checkWebPSupport, preloadImages };
