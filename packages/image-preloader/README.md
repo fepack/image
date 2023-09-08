@@ -22,13 +22,12 @@ pnpm add -D @febox/image-preloader
 ```js
 import { checkWebPSupport } from "@febox/image-preloader";
 
-checkWebPSupport((supportsWebp) => {
-  if (supportsWebp) {
-    console.log("This browser supports webp format.");
-  } else {
-    console.log("This browser does not support webp format.");
-  }
-});
+const webpIsSupported = await checkWebPSupport();
+if (webpIsSupported) {
+  console.log("This browser supports webp format.");
+} else {
+  console.log("This browser does not support webp format.");
+}
 ```
 
 ### 이미지 프리로딩
