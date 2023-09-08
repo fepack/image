@@ -1,10 +1,10 @@
 import { preloadImages } from "@febox/image-preloader";
 
 const images = [
-  { png: "/options_resize.png" },
+  { defaultSrc: "/options_resize.png" },
   {
     webp: "/information_resize.webp",
-    png: "/information_resize.png",
+    defaultSrc: "/information_resize.png",
   },
 ];
 
