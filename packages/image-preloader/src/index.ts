@@ -1,38 +1,34 @@
 // https://developers.google.com/speed/webp/faq?hl=ko#in_your_own_javascript
 function checkWebPSupport(): Promise<boolean> {
   return new Promise((resolve) => {
-    const webpTestImage = "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==";
     const webpCheckImageElement = new Image();
 
-    webpCheckImageElement.onload = () => {
+    webpCheckImageElement.onload = () =>
       resolve(
         webpCheckImageElement.width > 0 && webpCheckImageElement.height > 0
       );
-    };
+    webpCheckImageElement.onerror = () => resolve(false);
 
-    webpCheckImageElement.onerror = () => {
-      resolve(false);
-    };
-
-    webpCheckImageElement.src = "data:image/webp;base64," + webpTestImage;
+    const webpTestImageSrc = "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==";
+    webpCheckImageElement.src = "data:image/webp;base64," + webpTestImageSrc;
   });
 }
 
-interface ImageSources {
+interface ImageSource {
   defaultSrc: string;
-  webp?: string;
+  webpSrc?: string;
 }
 
-async function preloadImages(imageSources: ImageSources[]) {
+async function preloadImages(images: ImageSource[]) {
   const webpIsSupported = await checkWebPSupport();
 
-  for (const image of imageSources) {
+  for (const image of images) {
     const selectedSource =
-      webpIsSupported && image.webp ? image.webp : image.defaultSrc;
+      webpIsSupported && image.webpSrc ? image.webpSrc : image.defaultSrc;
     const preloadedImageElement = new Image();
 
     preloadedImageElement.src = selectedSource;
   }
 }
 
-export { checkWebPSupport, preloadImages };
+export { checkWebPSupport, preloadImages, type ImageSource };

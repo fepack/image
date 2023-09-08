@@ -38,7 +38,7 @@ import { preloadImages } from "@febox/image-preloader";
 const images = [
   {
     defaultSrc: "path/to/default/image.jpg",
-    webp: "path/to/image.webp",
+    webpSrc: "path/to/image.webp",
   },
   // ... more images
 ];
