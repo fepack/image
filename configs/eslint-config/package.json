@@ -1,5 +1,5 @@
 {
-  "name": "@febox/eslint-config-custom",
+  "name": "@febox/eslint-config",
   "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",

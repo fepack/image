@@ -21,23 +21,7 @@ importers:
         specifier: ^5.1.6
         version: 5.2.2
 
-  demo:
-    dependencies:
-      '@febox/image':
-        specifier: workspace:^
-        version: link:../packages/image
-    devDependencies:
-      '@febox/eslint-config-custom':
-        specifier: workspace:*
-        version: link:../packages/eslint-config-custom
-      '@febox/tsconfig':
-        specifier: workspace:*
-        version: link:../packages/tsconfig
-      vite:
-        specifier: ^4.4.5
-        version: 4.4.9(@types/node@20.5.9)
-
-  packages/eslint-config-custom:
+  configs/eslint-config:
     dependencies:
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.30.7
@@ -70,11 +54,29 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0(eslint@7.32.0)
 
+  configs/tsconfig: {}
+
+  demo:
+    dependencies:
+      '@febox/image':
+        specifier: workspace:^
+        version: link:../packages/image
+    devDependencies:
+      '@febox/eslint-config-custom':
+        specifier: workspace:*
+        version: link:../configs/eslint-config
+      '@febox/tsconfig':
+        specifier: workspace:*
+        version: link:../configs/tsconfig
+      vite:
+        specifier: ^4.4.5
+        version: 4.4.9(@types/node@20.5.9)
+
   packages/image:
     devDependencies:
       '@febox/tsconfig':
         specifier: workspace:*
-        version: link:../tsconfig
+        version: link:../../configs/tsconfig
       esbuild:
         specifier: ^0.18.11
         version: 0.18.11
@@ -84,8 +86,6 @@ importers:
       vitest:
         specifier: ^0.34.3
         version: 0.34.3(jsdom@22.1.0)
-
-  packages/tsconfig: {}
 
 packages:
 
@@ -1748,12 +1748,6 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
-  /is-core-module@2.11.0:
-    resolution: {integrity: sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==}
-    dependencies:
-      has: 1.0.3
-    dev: false
-
   /is-core-module@2.13.0:
     resolution: {integrity: sha512-Z7dk6Qo8pOCp3l4tsX2C5ZVas4V+UxwQodwZhLopL91TX8UyyHEXafPcyoeeWuLrwzHcr3igO78wNLwHJHsMCQ==}
     dependencies:
@@ -2304,7 +2298,7 @@ packages:
     resolution: {integrity: sha512-iMDbmAWtfU+MHpxt/I5iWI7cY6YVEZUQ3MBgPQ++XD1PELuJHIl82xBmObyP2KyQmkNB2dsqF7seoQQiAn5yDQ==}
     hasBin: true
     dependencies:
-      is-core-module: 2.11.0
+      is-core-module: 2.13.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
     dev: false
