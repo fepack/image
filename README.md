@@ -1,17 +1,18 @@
-# febox 🎁
+<div align="center">
+  <a href="https://febox.org" title="@febox/image - Collection of utilities for easy image control">
+    <img src="https://raw.githubusercontent.com/frontendbox/image/main/assets/banner.png" alt="@febox/image - Collection of utilities for easy image control" />
+  </a>
+</div>
 
-`febox`는 프론트엔드 개발을 위한 유용한 플러그인 및 도구들의 모음입니다. 이 패키지 모음은 효율적인 프론트엔드 개발을 돕기 위해 여러 작은 패키지들로 구성되어 있습니다.
+<br/>
 
-프론트엔드 환경은 빠르게 발전하며, 이에 따라 다양한 도구와 라이브러리가 계속해서 등장합니다. 이런 툴들은 개발의 생산성을 크게 향상시키지만, 적절한 선택과 활용은 항상 쉽지 않습니다. `febox`는 이러한 복잡한 환경에서도 항상 일관된 가치를 제공하기 위해 만들어졌습니다.
+<div align="center">
 
-시스템 개발에서는 변화와 안정성 사이에 종종 대립이 발생합니다. `febox`는 이런 대립을 인식하고 변화와 안정성 사이의 균형을 찾아나가고자 합니다. 필요에 따라 유연하게 대응하면서도 안정성을 유지하는 도구와 패키지의 선택이 핵심 목표입니다.
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge&color=4C4885)](https://github.com/frontendbox/image/blob/main/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-deepgreen.svg?style=for-the-badge&color=4C4885)](https://github.com/frontendbox/image/pulls)
 
-단순한 툴 모음 이상의 가치를 지니고 싶습니다. 프론트엔드 개발의 복잡성과 지속적인 변화에 대응하는 `febox`는 안정적이고 생산적인 개발을 지향합니다.
+![GitHub stars](https://img.shields.io/github/stars/frontendbox/image?style=social) ![GitHub forks](https://img.shields.io/github/forks/frontendbox/image?style=social) 
 
-## 패키지 목록
+</div>
 
-- [Image Preloader (@febox/image)](https://github.com/tooooo1/febox/tree/main/packages/image)
+# @febox/image
 
-## 라이선스
-
-이 프로젝트는 MIT 라이선스 하에 이용할 수 있습니다. 자세한 내용은 [여기](https://github.com/tooooo1/febox/blob/main/LICENSE)를 참조하세요.
