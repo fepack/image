@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'packages/**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Check quality
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        command: ['pnpm lint', 'pnpm test', 'pnpm type:check']
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.5.1
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'pnpm'
+          cache-dependency-path: 'pnpm-lock.yaml'
+          node-version-file: '.nvmrc'
+      - run: pnpm install --frozen-lockfile
+      - name: Run commands
+        run: ${{ matrix.command }}

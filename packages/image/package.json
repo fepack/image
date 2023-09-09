@@ -41,6 +41,7 @@
     "build:js": "node ./esbuild.config.js",
     "copy:cts": "cp dist/index.d.ts dist/index.d.cts",
     "clean": "rm -rf dist",
+    "prepack": "pnpm build",
     "test": "vitest"
   },
   "devDependencies": {
