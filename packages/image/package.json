@@ -42,13 +42,17 @@
     "copy:cts": "cp dist/index.d.ts dist/index.d.cts",
     "clean": "rm -rf dist",
     "prepack": "pnpm build",
-    "test": "vitest"
+    "test": "vitest run --coverage",
+    "test:watch": "vitest"
   },
   "devDependencies": {
     "@fepack/tsconfig": "workspace:*",
+    "@vitest/browser": "^0.34.4",
+    "@vitest/coverage-istanbul": "^0.34.4",
     "esbuild": "^0.18.11",
     "jsdom": "^22.1.0",
-    "vitest": "^0.34.3"
+    "vitest": "^0.34.3",
+    "webdriverio": "^8.16.6"
   },
   "publishConfig": {
     "access": "public"

@@ -1,12 +1,15 @@
-import { defineConfig } from "vitest/config";
+import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   test: {
-    name: "@fepack/image",
-    dir: "./src",
-    watch: false,
-    environment: "jsdom",
+    name: '@fepack/image',
+    dir: './src',
+    environment: 'jsdom',
     globals: true,
-    coverage: { provider: "v8" },
+    coverage: { provider: 'istanbul' },
+    browser: {
+      enabled: true,
+      name: 'chrome', // browser name is required
+    },
   },
-});
+})
