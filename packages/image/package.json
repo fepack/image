@@ -41,6 +41,7 @@
     "build:js": "node ./esbuild.config.js",
     "copy:cts": "cp dist/index.d.ts dist/index.d.cts",
     "clean": "rm -rf dist",
+    "cypress:open": "cypress open",
     "prepack": "pnpm build",
     "test": "vitest run --coverage",
     "test:watch": "vitest"
@@ -49,6 +50,7 @@
     "@fepack/tsconfig": "workspace:*",
     "@vitest/browser": "^0.34.4",
     "@vitest/coverage-istanbul": "^0.34.4",
+    "cypress": "^13.1.0",
     "esbuild": "^0.18.11",
     "jsdom": "^22.1.0",
     "vitest": "^0.34.3",
