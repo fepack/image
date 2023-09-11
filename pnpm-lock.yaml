@@ -68,22 +68,6 @@ importers:
 
   configs/tsconfig: {}
 
-  demo:
-    dependencies:
-      '@fepack/image':
-        specifier: workspace:^
-        version: link:../packages/image
-    devDependencies:
-      '@fepack/eslint-config':
-        specifier: workspace:*
-        version: link:../configs/eslint-config
-      '@fepack/tsconfig':
-        specifier: workspace:*
-        version: link:../configs/tsconfig
-      vite:
-        specifier: ^4.4.5
-        version: 4.4.9(@types/node@20.5.9)
-
   packages/image:
     devDependencies:
       '@fepack/tsconfig':
@@ -107,6 +91,22 @@ importers:
       vitest:
         specifier: ^0.34.3
         version: 0.34.3(@vitest/browser@0.34.4)(jsdom@22.1.0)(playwright@1.37.1)
+
+  websites/demo-image:
+    dependencies:
+      '@fepack/image':
+        specifier: workspace:^
+        version: link:../../packages/image
+    devDependencies:
+      '@fepack/eslint-config':
+        specifier: workspace:*
+        version: link:../../configs/eslint-config
+      '@fepack/tsconfig':
+        specifier: workspace:*
+        version: link:../../configs/tsconfig
+      vite:
+        specifier: ^4.4.5
+        version: 4.4.9(@types/node@20.5.9)
 
   websites/documentation:
     dependencies:

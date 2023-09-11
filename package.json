@@ -14,7 +14,6 @@
   "type": "module",
   "workspaces": [
     "configs/*",
-    "demo/*",
     "packages/*",
     "websites/*"
   ],

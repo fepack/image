@@ -1,4 +1,6 @@
-// https://developers.google.com/speed/webp/faq?hl=ko#in_your_own_javascript
+/** 
+ * @see https://developers.google.com/speed/webp/faq?hl=ko#in_your_own_javascript
+ */
 function isSupportWebP(): Promise<boolean> {
   return new Promise((resolve) => {
     const image = new Image();
