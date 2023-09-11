@@ -18,9 +18,9 @@ jobs:
           version: 8.5.1
       - uses: actions/setup-node@v3
         with:
-          cache: 'pnpm'
-          cache-dependency-path: 'pnpm-lock.yaml'
-          node-version-file: '.nvmrc'
+          cache: "pnpm"
+          cache-dependency-path: "pnpm-lock.yaml"
+          node-version-file: ".nvmrc"
       - run: pnpx playwright install
       - run: pnpm install --frozen-lockfile
       - run: pnpm test

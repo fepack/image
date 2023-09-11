@@ -9,12 +9,11 @@ const images = [
 ];
 
 const isSupport = await isSupportWebP();
-console.log({ isSupport });
 
 load(images);
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
-    <h1>@fepack/demo-image</h1>
+    <h1>@fepack/demo-image isSupportWebP: ${isSupport}</h1>
   </div>
 `;
