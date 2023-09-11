@@ -41,7 +41,6 @@
     "build:js": "node ./esbuild.config.js",
     "copy:cts": "cp dist/index.d.ts dist/index.d.cts",
     "clean": "rm -rf dist",
-    "cypress:open": "cypress open",
     "prepack": "pnpm build",
     "test": "vitest run --coverage",
     "test:watch": "vitest"
