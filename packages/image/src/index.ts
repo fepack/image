@@ -6,8 +6,6 @@ function isSupportWebP(): Promise<boolean> {
     image.onerror = () => resolve(false)
     image.src =
       'data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA=='
-      
-    document.body.appendChild(image)
   })
 }
 
