@@ -14,4 +14,10 @@
 
 </div>
 
+<div align="center">
+
+[OFFICIAL DOCS](https://image.fepack.org) | [DEPENDENCY GRAPH](https://graph.image.fepack.org) | [CONTRIBUTING](https://github.com/fepack/image/pulls) | [LICENSE](./LICENSE)
+
+</div>
+
 # @fepack/image

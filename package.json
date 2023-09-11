@@ -22,6 +22,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "graph": "rimraf ./graph && mkdir graph && turbo run build --graph=graph/index.html",
     "lint": "turbo run lint",
     "lint:pack": "packlint sort -R",
     "lint:pub": "turbo run lint:pub",
@@ -34,6 +35,7 @@
     "packlint": "^0.2.4",
     "prettier": "^2.5.1",
     "publint": "^0.2.2",
+    "rimraf": "^5.0.1",
     "turbo": "latest",
     "typescript": "^5.1.6"
   }
