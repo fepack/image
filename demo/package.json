@@ -1,19 +1,19 @@
 {
   "name": "@fepack/demo-image",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
+    "dev": "vite",
     "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fepack/image": "workspace:^"
   },
   "devDependencies": {
     "@fepack/eslint-config": "workspace:*",
     "@fepack/tsconfig": "workspace:*",
     "vite": "^4.4.5"
-  },
-  "dependencies": {
-    "@fepack/image": "workspace:^"
   }
 }

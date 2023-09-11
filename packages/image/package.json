@@ -1,10 +1,7 @@
 {
   "name": "@fepack/image",
   "version": "0.0.0",
-  "type": "module",
   "description": "Image preloader for fepack",
-  "license": "MIT",
-  "author": "tooooo1",
   "keywords": [
     "fepack",
     "image",
@@ -15,9 +12,10 @@
     "url": "https://github.com/fepack/image.git",
     "directory": "packages/image"
   },
+  "license": "MIT",
+  "author": "tooooo1",
   "sideEffects": false,
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "type": "module",
   "exports": {
     ".": {
       "import": {
@@ -31,16 +29,18 @@
     },
     "./package.json": "./package.json"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "src"
   ],
   "scripts": {
     "build": "pnpm clean && pnpm build:tsc && pnpm build:js && pnpm copy:cts",
-    "build:tsc": "tsc --emitDeclarationOnly",
     "build:js": "node ./esbuild.config.js",
-    "copy:cts": "cp dist/index.d.ts dist/index.d.cts",
+    "build:tsc": "tsc --emitDeclarationOnly",
     "clean": "rm -rf dist",
+    "copy:cts": "cp dist/index.d.ts dist/index.d.cts",
     "prepack": "pnpm build",
     "test": "vitest run --coverage",
     "test:watch": "vitest"
@@ -49,9 +49,9 @@
     "@fepack/tsconfig": "workspace:*",
     "@vitest/browser": "^0.34.4",
     "@vitest/coverage-istanbul": "^0.34.4",
-    "playwright": "^1.37.1",
     "esbuild": "^0.18.11",
     "jsdom": "^22.1.0",
+    "playwright": "^1.37.1",
     "vitest": "^0.34.3"
   },
   "publishConfig": {

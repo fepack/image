@@ -10,6 +10,7 @@
     "url": "https://github.com/tooooo1/fepack.git"
   },
   "license": "MIT",
+  "packageManager": "pnpm@8.6.10",
   "type": "module",
   "workspaces": [
     "configs/*",
@@ -20,17 +21,18 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
+    "lint:pack": "packlint sort -R",
     "prepack": "turbo run prepack",
     "test": "turbo run test",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "type:check": "turbo run type:check --parallel"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
+    "packlint": "^0.2.4",
     "prettier": "^2.5.1",
     "turbo": "latest",
     "typescript": "^5.1.6"
-  },
-  "packageManager": "pnpm@8.6.10"
+  }
 }
