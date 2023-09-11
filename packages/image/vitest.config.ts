@@ -9,6 +9,7 @@ export default defineConfig({
     coverage: { provider: 'istanbul' },
     browser: {
       enabled: true,
+      headless: true,
       name: 'chrome', // browser name is required
     },
   },
