@@ -10,6 +10,7 @@ export default defineConfig({
     browser: {
       enabled: true,
       headless: true,
+      provider: 'playwright',
       name: 'chrome', // browser name is required
     },
   },

@@ -22,11 +22,6 @@ jobs:
         command: ['pnpm lint', 'pnpm test', 'pnpm type:check']
     steps:
       - uses: actions/checkout@v3
-      # https://github.com/browser-actions/setup-chrome
-      - name: Install Chrome Headless
-        uses: browser-actions/setup-chrome@latest
-        with:
-          chrome-version: latest
       - uses: pnpm/action-setup@v2
         with:
           version: 8.5.1
@@ -36,5 +31,7 @@ jobs:
           cache-dependency-path: 'pnpm-lock.yaml'
           node-version-file: '.nvmrc'
       - run: pnpm install --frozen-lockfile
+      - name: Install Playwright browsers
+        run: npx playwright install
       - name: Run commands
         run: ${{ matrix.command }}
