@@ -24,6 +24,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "lint:pack": "packlint sort -R",
+    "lint:pub": "turbo run lint:pub",
     "prepack": "turbo run prepack",
     "test": "turbo run test",
     "type:check": "turbo run type:check --parallel"
@@ -32,6 +33,7 @@
     "eslint": "^7.32.0",
     "packlint": "^0.2.4",
     "prettier": "^2.5.1",
+    "publint": "^0.2.2",
     "turbo": "latest",
     "typescript": "^5.1.6"
   }
