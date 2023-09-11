@@ -21,6 +21,9 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "changeset": "changeset",
+    "changeset:publish": "pnpm prepack && changeset publish",
+    "changeset:version": "changeset version && pnpm i --lockfile-only",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "graph": "rimraf ./graph && mkdir graph && turbo run build --graph=graph/index.html",
     "lint": "turbo run lint",
@@ -31,6 +34,7 @@
     "type:check": "turbo run type:check --parallel"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "eslint": "^7.32.0",
     "packlint": "^0.2.4",
     "prettier": "^2.5.1",

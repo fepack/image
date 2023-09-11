@@ -1,0 +1,43 @@
+name: Changesets PR or Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.5.1
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'pnpm'
+          cache-dependency-path: 'pnpm-lock.yaml'
+          node-version-file: '.nvmrc'
+      - run: pnpm install --frozen-lockfile
+
+      - name: Set git user
+        run: |
+          git config --global user.email "jungchungil7@gmail.com"
+          git config --global user.name "Chung-il Jung"
+
+      - name: Create Changesets Pull Request or Publish to NPM
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          setupGitUser: false
+          title: 'chore: version packages'
+          commit: |
+            chore: version packages
+
+            Co-authored-by: Chung-il Jung <jungchungil7@gmail.com>
+            Co-authored-by: Jonghyeon Ko <manudeli.ko@gmail.com>
+          version: pnpm changeset:version
+          publish: pnpm changeset:publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
