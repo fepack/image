@@ -6,8 +6,6 @@ on:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
-    paths:
-      - "packages/**"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
