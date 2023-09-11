@@ -1,0 +1,19 @@
+coverage:
+  status:
+    project:
+      default:
+        target: 100%
+        threshold: 30%
+      fepack-image:
+        target: 100%
+        threshold: 30%
+
+comment:
+  layout: "header, reach, diff, flags, components"
+
+component_management:
+  individual_components:
+    - component_id: fepack-image
+      name: "@fepack/image"
+      paths:
+        - packages/image
