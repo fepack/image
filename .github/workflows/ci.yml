@@ -32,7 +32,7 @@ jobs:
           node-version-file: '.nvmrc'
       - name: Install Playwright browsers
         if: matrix.command == 'pnpm test'
-        run: pnpm add --dev playwright
+        run: pnpm add -D playwright
       - run: pnpm install --frozen-lockfile
       - name: Run commands
         run: ${{ matrix.command }}
