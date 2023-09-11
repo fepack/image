@@ -41,10 +41,15 @@
     "build:js": "node ./esbuild.config.js",
     "copy:cts": "cp dist/index.d.ts dist/index.d.cts",
     "clean": "rm -rf dist",
-    "test": "vitest"
+    "prepack": "pnpm build",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest"
   },
   "devDependencies": {
     "@fepack/tsconfig": "workspace:*",
+    "@vitest/browser": "^0.34.4",
+    "@vitest/coverage-istanbul": "^0.34.4",
+    "playwright": "^1.37.1",
     "esbuild": "^0.18.11",
     "jsdom": "^22.1.0",
     "vitest": "^0.34.3"

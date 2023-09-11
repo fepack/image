@@ -12,13 +12,16 @@
   "license": "MIT",
   "type": "module",
   "workspaces": [
+    "configs/*",
     "demo/*",
-    "packages/*"
+    "packages/*",
+    "websites/*"
   ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "prepack": "turbo run prepack",
     "test": "turbo run test",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "type:check": "turbo run type:check --parallel"

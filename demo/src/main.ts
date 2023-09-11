@@ -1,4 +1,4 @@
-import { load } from "@fepack/image";
+import { isSupportWebP, load } from "@fepack/image";
 
 const images = [
   { defaultSrc: "/options_resize.png" },
@@ -8,10 +8,12 @@ const images = [
   },
 ];
 
+const isSupport = await isSupportWebP();
+
 load(images);
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
-    <h1>@fepack/demo-image</h1>
+    <h1>@fepack/demo-image isSupportWebP: ${isSupport}</h1>
   </div>
 `;
