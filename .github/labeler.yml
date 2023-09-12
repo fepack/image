@@ -1,0 +1,15 @@
+"@fepack/image":
+  - packages/image/*
+documentation:
+  - websites/documentation/*
+  - "**/*.md"
+eslint:
+  - configs/eslint-config/*
+tsconfig:
+  - configs/tsconfig/*
+  - tsconfig.json
+dependencies:
+  - pnpm*.yaml
+  - package*.json
+github:
+  - .github/*
