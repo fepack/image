@@ -1,37 +1,39 @@
-name: fepack 버그 레포트
-description: 문제 상황과 관련된 버그를 보고하는데 사용합니다.
+---
+name: "Bug Report"
+about: Report a reproducible bug or regression in fepack.
 title: "bug: "
-labels: ["bug"]
-body:
-  - type: markdown
-    attributes:
-      value: "## Issue Title\n<!-- 간결하게 문제 상황을 나타내는 제목을 작성해주세요. -->"
+labels: "bug"
+---
 
-  - type: textarea
-    attributes:
-      label: "문제 상황"
-      description: "어떤 문제가 발생했는지 구체적으로 기술하세요. 가능하다면, 문제가 언제, 어떻게 발생하는지를 포함한 상황을 자세히 설명해주세요."
-    validations:
-      required: true
+<!--
+  Please provide a clear and concise description of what the bug is. If possible, 
+  describe when and how the issue arises. Make sure to include screenshots if 
+  necessary, and test with the latest version of the relevant fepack packages to 
+  ensure the issue hasn't been resolved yet.
+-->
 
-  - type: textarea
-    attributes:
-      label: "기대하는 동작"
-      description: "문제 상황이 발생하지 않았을 때 어떤 동작을 기대했는지 설명해주세요."
-    validations:
-      required: true
+fepack version:
 
-  - type: textarea
-    attributes:
-      label: "스크린샷"
-      description: "문제 상황을 보여주는 스크린샷이 있다면 첨부해주세요."
+## Steps To Reproduce
 
-  - type: textarea
-    attributes:
-      label: "제안하는 해결 방법"
-      description: "문제를 해결할 수 있는 방법이 있다면 제시해주세요."
+1.
+2.
 
-  - type: textarea
-    attributes:
-      label: "추가 정보"
-      description: "문제 상황과 관련하여 추가적인 정보가 있다면 기입해주세요."
+<!--
+  Your bug will be addressed more promptly if we can reproduce it without any 
+  dependencies other than fepack. Issues without a clear reproduction step or 
+  code examples might be closed if they're not actionable.
+-->
+
+Link to code example:
+
+<!--
+  Please provide a CodeSandbox link, a GitHub repository link, or a minimal code 
+  example that reproduces the issue. If applicable, add screenshots of the 
+  application.
+-->
+
+## The current behavior
+
+
+## The expected behavior
