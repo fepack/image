@@ -40,7 +40,6 @@ const loadClient = new (class LoadClient {
     const loadStateGot = loadCache.get(src);
 
     if (loadStateGot?.error) {
-      // eslint-disable-next-line @typescript-eslint/no-throw-literal
       throw loadStateGot.error;
     }
     if (loadStateGot?.src) {
@@ -48,7 +47,6 @@ const loadClient = new (class LoadClient {
     }
 
     if (loadStateGot?.promise) {
-      // eslint-disable-next-line @typescript-eslint/no-throw-literal
       throw loadStateGot.promise;
     }
 
@@ -64,7 +62,6 @@ const loadClient = new (class LoadClient {
     };
 
     loadCache.set(src, newLoadState);
-    // eslint-disable-next-line @typescript-eslint/no-throw-literal
     throw newLoadState.promise;
   };
 })();
@@ -82,5 +79,5 @@ type LoadProps = {
 };
 export const Load = ({ src, children }: LoadProps) => {
   const load = useLoad({ src });
-  return createElement(children, load)
+  return createElement(children, load);
 };
