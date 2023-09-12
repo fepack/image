@@ -1,20 +1,25 @@
-name: fepack 기능 추가 제보
-description: 새로운 기능 제안 또는 기존 기능의 개선을 제보하는데 사용합니다.
+---
+name: "Feature Request"
+about: Suggest a new feature or an enhancement to an existing one.
 title: "feat: "
-labels: ["enhancement"]
-body:
-  - type: markdown
-    attributes:
-      value: "## Issue Title\n<!-- 간결하게 기능 추가 제안을 나타내는 제목을 작성하세요. -->"
+labels: "enhancement"
+---
 
-  - type: textarea
-    attributes:
-      label: "기능 설명"
-      description: "추가하거나 개선하고자 하는 기능에 대해 구체적으로 기술하세요."
-    validations:
-      required: true
+<!--
+Please provide a succinct and clear description of the proposed feature or enhancement.
+Describe in detail what you want to suggest and why it's important.
+-->
 
-  - type: textarea
-    attributes:
-      label: "추가 정보"
-      description: "기능 추가 제안과 관련하여 추가적인 정보가 있다면 기입하세요."
+## Feature Description:
+
+<!--
+Clearly and concisely describe the feature you'd like to see added or improved upon.
+-->
+
+
+## Additional Information:
+
+<!--
+If there's any other context, details, or information related to this feature request,
+please provide it here.
+-->
