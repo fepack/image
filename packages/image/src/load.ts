@@ -1,4 +1,4 @@
-import { checkWebPSupport } from "..";
+import { checkWebPSupport } from ".";
 
 interface ImageSource {
   defaultSrc: string;
