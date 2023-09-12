@@ -31,7 +31,6 @@
     "build": "tsup",
     "build:watch": "tsup --watch",
     "clean": "rimraf ./dist && rimraf ./coverage",
-    "lint": "eslint \"**/*.ts*\"",
     "lint:pub": "publint --strict",
     "prepack": "pnpm build",
     "type:check": "tsc --noEmit"
