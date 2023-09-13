@@ -2,7 +2,7 @@
 
 import { MediaQueryProvider } from "@jsxcss/emotion";
 import { Suspensive, SuspensiveProvider } from "@suspensive/react";
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 import { Spinner } from "~/components/uis";
 
 const suspensive = new Suspensive({

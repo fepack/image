@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      <Link href={"/load"}>to load</Link>
+      <Link href="/load">to load</Link>
       <ErrorBoundary fallback={() => <>load image error</>}>
         <Suspense.CSROnly>
           <Load src="https://ik.imagekit.io/ikmedia/women-dress-2.jpg">
