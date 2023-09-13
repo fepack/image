@@ -6,7 +6,6 @@
   "scripts": {
     "build": "tsc && vite build",
     "dev": "vite",
-    "lint:pub": "publint --strict",
     "preview": "vite preview"
   },
   "dependencies": {
