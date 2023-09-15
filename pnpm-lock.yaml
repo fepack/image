@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -82,11 +86,11 @@ importers:
         specifier: ^22.1.0
         version: 22.1.0
       playwright:
-        specifier: ^1.37.1
-        version: 1.37.1
+        specifier: ^1.38.0
+        version: 1.38.0
       vitest:
         specifier: ^0.34.3
-        version: 0.34.3(@vitest/browser@0.34.4)(jsdom@22.1.0)(playwright@1.37.1)
+        version: 0.34.3(@vitest/browser@0.34.4)(jsdom@22.1.0)(playwright@1.38.0)
 
   packages/react-image:
     devDependencies:
@@ -4037,7 +4041,7 @@ packages:
       magic-string: 0.30.3
       modern-node-polyfills: 0.1.3(rollup@2.79.1)
       sirv: 2.0.3
-      vitest: 0.34.3(@vitest/browser@0.34.4)(jsdom@22.1.0)(playwright@1.37.1)
+      vitest: 0.34.3(@vitest/browser@0.34.4)(jsdom@22.1.0)(playwright@1.38.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -4054,7 +4058,7 @@ packages:
       istanbul-reports: 3.1.6
       picocolors: 1.0.0
       test-exclude: 6.0.0
-      vitest: 0.34.3(@vitest/browser@0.34.4)(jsdom@22.1.0)(playwright@1.37.1)
+      vitest: 0.34.3(@vitest/browser@0.34.4)(jsdom@22.1.0)(playwright@1.38.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -6219,7 +6223,7 @@ packages:
     dependencies:
       confusing-browser-globals: 1.0.11
       eslint: 7.32.0
-      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@5.44.0)(eslint-import-resolver-typescript@3.6.0)(eslint@7.32.0)
+      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@5.44.0)(eslint@7.32.0)
       object.assign: 4.1.4
       object.entries: 1.1.7
       semver: 6.3.1
@@ -6237,7 +6241,7 @@ packages:
       '@typescript-eslint/parser': 5.44.0(eslint@7.32.0)(typescript@5.2.2)
       eslint: 7.32.0
       eslint-config-airbnb-base: 15.0.0(eslint-plugin-import@2.28.1)(eslint@7.32.0)
-      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@5.44.0)(eslint-import-resolver-typescript@3.6.0)(eslint@7.32.0)
+      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@5.44.0)(eslint@7.32.0)
     dev: false
 
   /eslint-config-airbnb@19.0.4(eslint-plugin-import@2.28.1)(eslint-plugin-jsx-a11y@6.7.1)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.32.2)(eslint@7.32.0):
@@ -6252,7 +6256,7 @@ packages:
     dependencies:
       eslint: 7.32.0
       eslint-config-airbnb-base: 15.0.0(eslint-plugin-import@2.28.1)(eslint@7.32.0)
-      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@5.44.0)(eslint-import-resolver-typescript@3.6.0)(eslint@7.32.0)
+      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@5.44.0)(eslint@7.32.0)
       eslint-plugin-jsx-a11y: 6.7.1(eslint@7.32.0)
       eslint-plugin-react: 7.32.2(eslint@7.32.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@7.32.0)
@@ -6387,6 +6391,41 @@ packages:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
       - supports-color
+
+  /eslint-plugin-import@2.28.1(@typescript-eslint/parser@5.44.0)(eslint@7.32.0):
+    resolution: {integrity: sha512-9I9hFlITvOV55alzoKBI+K9q74kv0iKMeY6av5+umsNwayt59fz692daGyjR+oStBQgx6nwR9rXldDev3Clw+A==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      '@typescript-eslint/parser': '*'
+      eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
+    dependencies:
+      '@typescript-eslint/parser': 5.44.0(eslint@7.32.0)(typescript@5.2.2)
+      array-includes: 3.1.6
+      array.prototype.findlastindex: 1.2.3
+      array.prototype.flat: 1.3.1
+      array.prototype.flatmap: 1.3.1
+      debug: 3.2.7
+      doctrine: 2.1.0
+      eslint: 7.32.0
+      eslint-import-resolver-node: 0.3.9
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.44.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.0)(eslint@7.32.0)
+      has: 1.0.3
+      is-core-module: 2.13.0
+      is-glob: 4.0.3
+      minimatch: 3.1.2
+      object.fromentries: 2.0.7
+      object.groupby: 1.0.1
+      object.values: 1.1.7
+      semver: 6.3.1
+      tsconfig-paths: 3.14.2
+    transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
+    dev: false
 
   /eslint-plugin-jsx-a11y@6.7.1(eslint@7.32.0):
     resolution: {integrity: sha512-63Bog4iIethyo8smBklORknVjB0T2dwB8Mr/hIC+fBS0uyHdYYpzM/Ed+YC8VxTjlXHEWFOdmgwcDn1U2L9VCA==}
@@ -7018,6 +7057,14 @@ packages:
 
   /fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
+
+  /fsevents@2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -9297,19 +9344,20 @@ packages:
       find-up: 3.0.0
     dev: false
 
-  /playwright-core@1.37.1:
-    resolution: {integrity: sha512-17EuQxlSIYCmEMwzMqusJ2ztDgJePjrbttaefgdsiqeLWidjYz9BxXaTaZWxH1J95SHGk6tjE+dwgWILJoUZfA==}
+  /playwright-core@1.38.0:
+    resolution: {integrity: sha512-f8z1y8J9zvmHoEhKgspmCvOExF2XdcxMW8jNRuX4vkQFrzV4MlZ55iwb5QeyiFQgOFCUolXiRHgpjSEnqvO48g==}
     engines: {node: '>=16'}
     hasBin: true
     dev: true
 
-  /playwright@1.37.1:
-    resolution: {integrity: sha512-bgUXRrQKhT48zHdxDYQTpf//0xDfDd5hLeEhjuSw8rXEGoT9YeElpfvs/izonTNY21IQZ7d3s22jLxYaAnubbQ==}
+  /playwright@1.38.0:
+    resolution: {integrity: sha512-fJGw+HO0YY+fU/F1N57DMO+TmXHTrmr905J05zwAQE9xkuwP/QLDk63rVhmyxh03dYnEhnRbsdbH9B0UVVRB3A==}
     engines: {node: '>=16'}
     hasBin: true
-    requiresBuild: true
     dependencies:
-      playwright-core: 1.37.1
+      playwright-core: 1.38.0
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /postcss-calc@8.2.4(postcss@8.4.29):
@@ -12007,7 +12055,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@0.34.3(@vitest/browser@0.34.4)(jsdom@22.1.0)(playwright@1.37.1):
+  /vitest@0.34.3(@vitest/browser@0.34.4)(jsdom@22.1.0)(playwright@1.38.0):
     resolution: {integrity: sha512-7+VA5Iw4S3USYk+qwPxHl8plCMhA5rtfwMjgoQXMT7rO5ldWcdsdo3U1QD289JgglGK4WeOzgoLTsGFu6VISyQ==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -12057,7 +12105,7 @@ packages:
       magic-string: 0.30.3
       pathe: 1.1.1
       picocolors: 1.0.0
-      playwright: 1.37.1
+      playwright: 1.38.0
       std-env: 3.4.3
       strip-literal: 1.3.0
       tinybench: 2.5.0
@@ -12592,7 +12640,3 @@ packages:
   /zwitch@1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
     dev: false
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false

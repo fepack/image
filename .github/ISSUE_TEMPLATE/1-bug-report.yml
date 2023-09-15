@@ -1,39 +1,28 @@
----
-name: "Bug Report"
-about: Report a reproducible bug or regression in fepack.
+name: Bug Report
+description: Report a reproducible bug or regression in fepack.
 title: "bug: "
-labels: "bug"
----
+labels: ["bug"]
+body:
+  - type: textarea
+    attributes:
+      label: "Description of the Issue"
+      description: "Please provide a detailed description of the problem. If possible, elaborate on when and how the issue arises."
+    validations:
+      required: true
 
-<!--
-  Please provide a clear and concise description of what the bug is. If possible, 
-  describe when and how the issue arises. Make sure to include screenshots if 
-  necessary, and test with the latest version of the relevant fepack packages to 
-  ensure the issue hasn't been resolved yet.
--->
+  - type: textarea
+    attributes:
+      label: "Expected Behavior"
+      description: "Describe what you expected to happen if the issue hadn't occurred."
+    validations:
+      required: true
 
-fepack version:
+  - type: textarea
+    attributes:
+      label: "Screenshots"
+      description: "Attach any screenshots that might help in understanding the issue."
 
-## Steps To Reproduce
-
-1.
-2.
-
-<!--
-  Your bug will be addressed more promptly if we can reproduce it without any 
-  dependencies other than fepack. Issues without a clear reproduction step or 
-  code examples might be closed if they're not actionable.
--->
-
-Link to code example:
-
-<!--
-  Please provide a CodeSandbox link, a GitHub repository link, or a minimal code 
-  example that reproduces the issue. If applicable, add screenshots of the 
-  application.
--->
-
-## The current behavior
-
-
-## The expected behavior
+  - type: textarea
+    attributes:
+      label: "Proposed Solution"
+      description: "If you have any suggestions on how the problem can be resolved, please provide them."
