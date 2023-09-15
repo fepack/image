@@ -1,25 +1,16 @@
----
-name: "Feature Request"
-about: Suggest a new feature or an enhancement to an existing one.
+name: Feature Request
+description: Use this to suggest a new feature or an improvement to an existing feature in fepack.
 title: "feat: "
-labels: "enhancement"
----
+labels: ["enhancement"]
+body:
+  - type: textarea
+    attributes:
+      label: "Feature Description"
+      description: "Please provide a detailed description of the feature you would like to add or improve."
+    validations:
+      required: true
 
-<!--
-Please provide a succinct and clear description of the proposed feature or enhancement.
-Describe in detail what you want to suggest and why it's important.
--->
-
-## Feature Description:
-
-<!--
-Clearly and concisely describe the feature you'd like to see added or improved upon.
--->
-
-
-## Additional Information:
-
-<!--
-If there's any other context, details, or information related to this feature request,
-please provide it here.
--->
+  - type: textarea
+    attributes:
+      label: "Additional Information"
+      description: "Include any additional information relevant to the feature request."
