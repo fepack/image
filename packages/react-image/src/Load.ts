@@ -1,4 +1,5 @@
-import { FunctionComponent, createElement, useSyncExternalStore } from "react";
+import type { FunctionComponent } from "react";
+import { createElement, useSyncExternalStore } from "react";
 
 type ImageSrc = HTMLImageElement["src"];
 

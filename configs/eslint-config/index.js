@@ -37,5 +37,7 @@ module.exports = {
     ],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
+    "@typescript-eslint/no-throw-literal": "off",
+    "no-underscore-dangle": "off",
   },
 };
