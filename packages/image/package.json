@@ -1,6 +1,6 @@
 {
   "name": "@fepack/image",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Image preloader for fepack",
   "keywords": [
     "fepack",
