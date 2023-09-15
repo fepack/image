@@ -1,5 +1,11 @@
 # @fepack/image
 
+## 0.0.5
+
+### Patch Changes
+
+- 33ee2a3: feat: eslint to fepack/image
+
 ## 0.0.4
 
 ### Patch Changes
