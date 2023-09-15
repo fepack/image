@@ -1,22 +1,16 @@
-import checkWebPSupport from "./checkWebPSupport";
-
 interface ImageSource {
   defaultSrc: string;
   webpSrc?: string;
 }
 
 /**
- * Loads the given images. If WebP is supported and a WebP source is provided, it will load that. Otherwise, it loads the default source.
+ * Loads the given images. If WebP is WebP source is provided, it will load that. Otherwise, it loads the default source.
  * @param {ImageSource[]} images - Array of image sources to preload.
  */
-async function load(images: ImageSource[]) {
-  const webpSupported = await checkWebPSupport();
-
+function load(images: ImageSource[]) {
   for (const image of images) {
-    const selectedSource =
-      webpSupported && image.webpSrc ? image.webpSrc : image.defaultSrc;
     const imageElement = new Image();
-    imageElement.src = selectedSource;
+    imageElement.src = image.webpSrc ? image.webpSrc : image.defaultSrc;
   }
 }
 
