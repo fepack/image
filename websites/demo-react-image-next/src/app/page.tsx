@@ -1,7 +1,7 @@
 "use client";
 
 import { Load } from "@fepack/react-image";
-import { Suspense, ErrorBoundary } from "@suspensive/react";
+import { ErrorBoundary, Suspense } from "@suspensive/react";
 import Link from "next/link";
 
 export default function Home() {

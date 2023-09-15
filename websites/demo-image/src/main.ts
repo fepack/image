@@ -16,7 +16,7 @@ const images = [
 
 load(images);
 
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
+(document.querySelector<HTMLDivElement>("#app") as HTMLDivElement).innerHTML = `
   <div>
     <h1>@fepack/demo-image</h1>
   </div>

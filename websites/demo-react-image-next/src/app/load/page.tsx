@@ -1,9 +1,9 @@
 "use client";
 
-import { Suspense } from "@suspensive/react";
 import { Load } from "@fepack/react-image";
-import { Area } from "~/components/uis";
+import { Suspense } from "@suspensive/react";
 import Link from "next/link";
+import { Area } from "~/components/uis";
 
 const BoundaryPage = () => {
   return (
