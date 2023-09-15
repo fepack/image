@@ -1,5 +1,11 @@
 # @fepack/image
 
+## 0.0.4
+
+### Patch Changes
+
+- a03ddf4: refactor: Extend checks to cover all WebP feature types
+
 ## 0.0.3
 
 ### Patch Changes
