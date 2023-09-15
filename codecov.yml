@@ -3,10 +3,10 @@ coverage:
     project:
       default:
         target: 100%
-        threshold: 60%
+        threshold: 100%
       fepack-image:
         target: 100%
-        threshold: 60%
+        threshold: 100%
 
 comment:
   layout: "header, reach, diff, flags, components"
