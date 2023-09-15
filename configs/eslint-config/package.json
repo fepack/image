@@ -2,18 +2,22 @@
   "name": "@fepack/eslint-config",
   "version": "0.0.0",
   "private": true,
-  "license": "MIT",
-  "main": "index.js",
+  "files": [
+    "react-js.js",
+    "react-ts.js",
+    "react-ts-noimport.js"
+  ],
+  "scripts": {
+    "lint": "eslint ."
+  },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.30.7",
-    "@typescript-eslint/parser": "^5.30.7",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-prettier": "^4.2.1",
+    "@fepack/eslint-config-js": "workspace:*",
+    "@fepack/eslint-config-ts": "workspace:*",
+    "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-simple-import-sort": "^10.0.0"
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "peerDependencies": {
+    "eslint": "^6.0.0 || ^7.0.0 || ^8.0.0"
   }
 }

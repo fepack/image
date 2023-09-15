@@ -14,8 +14,7 @@
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
-    "strict": true,
-    "lib": ["ESNext", "DOM"]
+    "strict": true
   },
-  "exclude": ["node_modules"]
+  "exclude": ["dist", "esm", "build", "node_modules"]
 }
