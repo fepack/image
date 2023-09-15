@@ -18,7 +18,7 @@ type Feature = keyof typeof kTestImages;
  * @param feature - The WebP feature to check for.
  * @returns {Promise<boolean>} Returns a promise that resolves with a boolean indicating if the specified WebP feature is supported.
  */
-async function checkWebPFeatureSupport(feature: Features): Promise<boolean> {
+async function checkWebPFeatureSupport(feature: Feature): Promise<boolean> {
   return new Promise((resolve) => {
     const image = new Image();
     image.onload = () => resolve(image.width > 0 && image.height > 0);
