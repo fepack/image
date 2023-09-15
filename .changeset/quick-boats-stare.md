@@ -1,6 +1,6 @@
 ---
-"@fepack/eslint-config": patch
+"@fepack/image": patch
 "@fepack/react-image": patch
 ---
 
-feat: eslint to react image
+feat: eslint to fepack/image
