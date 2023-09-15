@@ -5,7 +5,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --port 4001",
-    "lint": "next lint",
+    "lint": "eslint \"**/*.ts*\"",
     "start": "next start",
     "type:check": "tsc --noEmit"
   },
@@ -20,6 +20,7 @@
     "@fepack/react-image": "workspace:0.0.1"
   },
   "devDependencies": {
+    "@fepack/eslint-config": "workspace:*",
     "@next/eslint-plugin-next": "13.4.6",
     "@types/node": "^17.0.45",
     "@types/react": "^18.2.0",

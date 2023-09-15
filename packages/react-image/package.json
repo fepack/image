@@ -31,11 +31,13 @@
     "build": "tsup",
     "build:watch": "tsup --watch",
     "clean": "rimraf ./dist && rimraf ./coverage",
+    "lint": "eslint \"**/*.ts*\"",
     "lint:pub": "publint --strict",
     "prepack": "pnpm build",
     "type:check": "tsc --noEmit"
   },
   "devDependencies": {
+    "@fepack/eslint-config": "workspace:^",
     "@fepack/tsconfig": "workspace:*",
     "@types/node": "^18.16.2",
     "@types/react": "^18.2.0",

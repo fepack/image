@@ -6,13 +6,15 @@
   "scripts": {
     "build": "tsc && vite build",
     "dev": "vite",
+    "lint": "eslint \"**/*.ts*\"",
     "preview": "vite preview"
   },
   "dependencies": {
     "@fepack/image": "workspace:^"
   },
   "devDependencies": {
-    "@fepack/eslint-config": "workspace:*",
+    "@fepack/eslint-config-js": "workspace:*",
+    "@fepack/eslint-config-ts": "workspace:*",
     "@fepack/tsconfig": "workspace:*",
     "vite": "^4.4.5"
   }

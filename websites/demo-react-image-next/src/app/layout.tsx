@@ -1,7 +1,7 @@
 import "./global.css";
 import { Metadata } from "next";
-import { Providers } from "./providers";
 import { PropsWithChildren } from "react";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "@fepack/react-image demo",

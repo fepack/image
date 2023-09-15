@@ -2,6 +2,7 @@
   "extends": "@fepack/tsconfig/base.json",
   "exclude": ["node_modules"],
   "compilerOptions": {
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "declarationDir": "dist"
   },
   "include": ["src/index.ts"]

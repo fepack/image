@@ -46,6 +46,8 @@
     "test:watch": "vitest"
   },
   "devDependencies": {
+    "@fepack/eslint-config-js": "workspace:*",
+    "@fepack/eslint-config-ts": "workspace:*",
     "@fepack/tsconfig": "workspace:*",
     "@vitest/browser": "^0.34.4",
     "@vitest/coverage-istanbul": "^0.34.4",
