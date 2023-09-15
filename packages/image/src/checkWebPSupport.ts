@@ -11,7 +11,7 @@ const kTestImages = {
     "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",
 };
 
-type Features = keyof typeof kTestImages;
+type Feature = keyof typeof kTestImages;
 
 /**
  * Checks if a specific WebP feature is supported by the browser.
