@@ -27,19 +27,17 @@ async function checkWebPFeatureSupport(feature: Feature): Promise<boolean> {
   });
 }
 
+const features = Object.keys(kTestImages).filter((key): key is Feature =>
+  Object.prototype.hasOwnProperty.call(kTestImages, key),
+);
+
 /**
  * Checks if the browser supports all key WebP features.
  * @returns {Promise<boolean>} Returns a promise that resolves with a boolean indicating if all key WebP features are supported.
  */
 async function checkWebPSupport(): Promise<boolean> {
-  const results = await Promise.all([
-    checkWebPFeatureSupport("lossy"),
-    checkWebPFeatureSupport("lossless"),
-    checkWebPFeatureSupport("alpha"),
-    checkWebPFeatureSupport("animation"),
-  ]);
-
-  return results.every((v) => v);
+  const results = await Promise.all(features.map(checkWebPFeatureSupport));
+  return results.every(Boolean);
 }
 
 export default checkWebPSupport;
