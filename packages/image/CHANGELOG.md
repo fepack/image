@@ -1,5 +1,12 @@
 # @fepack/image
 
+## 0.0.6
+
+### Patch Changes
+
+- 8615b96: feat: utility for MIME type detection (detect func)
+- 8615b96: feat: utility for MIME type detection (detect func)
+
 ## 0.0.5
 
 ### Patch Changes
