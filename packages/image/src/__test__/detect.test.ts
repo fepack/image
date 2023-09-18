@@ -1,7 +1,7 @@
 import { Buffer } from "buffer";
 import { describe, expect, test } from "vitest";
 import { detect } from "..";
-import { FILE_SIGNATURES, MIME_TYPES, type MimeType } from "../detect";
+import { FILE_TYPES } from "../detect";
 
 describe("MIME type detection utility", () => {
   test("should return null for unknown signatures", () => {
@@ -9,12 +9,13 @@ describe("MIME type detection utility", () => {
     expect(detect(unknownSignature)).toBeNull();
   });
 
-  Object.keys(FILE_SIGNATURES).forEach((key) => {
-    const mimeType = key as MimeType;
+  Object.keys(FILE_TYPES).forEach((key) => {
+    const mimeType = FILE_TYPES[key].mime;
+    const signature = FILE_TYPES[key].signature;
 
-    test(`should detect ${mimeType} files`, () => {
-      const signatureBuffer = Buffer.from(FILE_SIGNATURES[mimeType]);
-      expect(detect(signatureBuffer)).toEqual(MIME_TYPES[mimeType]);
+    test(`should detect ${key} files`, () => {
+      const signatureBuffer = Buffer.from(signature);
+      expect(detect(signatureBuffer)).toEqual(mimeType);
     });
   });
 
@@ -25,9 +26,9 @@ describe("MIME type detection utility", () => {
 
   test("should detect MIME type even with extra data", () => {
     const jpegWithExtraData = Buffer.concat([
-      Buffer.from(FILE_SIGNATURES.JPEG),
+      Buffer.from(FILE_TYPES.JPEG.signature),
       Buffer.from([0x00, 0x01, 0x02]),
     ]);
-    expect(detect(jpegWithExtraData)).toEqual(MIME_TYPES.JPEG);
+    expect(detect(jpegWithExtraData)).toEqual(FILE_TYPES.JPEG.mime);
   });
 });
