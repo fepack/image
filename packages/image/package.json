@@ -49,6 +49,7 @@
     "@fepack/eslint-config-js": "workspace:*",
     "@fepack/eslint-config-ts": "workspace:*",
     "@fepack/tsconfig": "workspace:*",
+    "@types/node": "^20.6.2",
     "@vitest/browser": "^0.34.4",
     "@vitest/coverage-istanbul": "^0.34.4",
     "esbuild": "^0.18.11",
