@@ -10,12 +10,11 @@ describe("MIME type detection utility", () => {
   });
 
   Object.keys(FILE_TYPES).forEach((key) => {
-    const mimeType = FILE_TYPES[key].mime;
-    const signature = FILE_TYPES[key].signature;
+    const { mime, signature } = FILE_TYPES[key];
 
     test(`should detect ${key} files`, () => {
       const signatureBuffer = Buffer.from(signature);
-      expect(detect(signatureBuffer)).toEqual(mimeType);
+      expect(detect(signatureBuffer)).toEqual(mime);
     });
   });
 
