@@ -1,6 +1,7 @@
 import { Buffer } from "buffer";
 import { describe, expect, test } from "vitest";
-import { FILE_SIGNATURES, MIME_TYPES, type MimeType, detect } from "..";
+import { detect } from "..";
+import { FILE_SIGNATURES, MIME_TYPES, type MimeType } from "../detect";
 
 describe("MIME type detection utility", () => {
   test("should return null for unknown signatures", () => {
