@@ -1,5 +1,11 @@
 # @fepack/image
 
+## 0.0.7
+
+### Patch Changes
+
+- 9584556: refactor: dynamic type-checking for WebP feature detection
+
 ## 0.0.6
 
 ### Patch Changes
