@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint ."
   },
-  "dependencies": {
+  "devDependencies": {
     "@fepack/eslint-config-js": "workspace:*",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
