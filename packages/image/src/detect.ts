@@ -44,7 +44,7 @@ const FILE_TYPE_KEYS = Object.keys(
  * @param {Buffer} buffer - The buffer containing the file's first few bytes.
  * @returns The detected MIME type or null if no known signature is matched.
  */
-export function detect(buffer: Buffer) {
+export const detect = (buffer: Buffer) => {
   for (const key of FILE_TYPE_KEYS) {
     const { mime, signature } = FILE_TYPES[key];
 
@@ -54,4 +54,4 @@ export function detect(buffer: Buffer) {
   }
 
   return null;
-}
+};

@@ -17,14 +17,13 @@ type Feature = keyof typeof kTestImages;
  * Checks if a specific WebP feature is supported by the browser.
  * @param feature - The WebP feature to check for.
  */
-function checkWebPFeatureSupport(feature: Feature) {
-  return new Promise<boolean>((resolve) => {
+const checkWebPFeatureSupport = (feature: Feature) =>
+  new Promise<boolean>((resolve) => {
     const image = new Image();
     image.onload = () => resolve(image.width > 0 && image.height > 0);
     image.onerror = () => resolve(false);
     image.src = "data:image/webp;base64," + kTestImages[feature];
   });
-}
 
 const features = Object.keys(kTestImages).filter((key): key is Feature =>
   Object.prototype.hasOwnProperty.call(kTestImages, key),
@@ -33,9 +32,7 @@ const features = Object.keys(kTestImages).filter((key): key is Feature =>
 /**
  * Checks if the browser supports all key WebP features.
  */
-async function checkWebPSupport() {
-  const results = await Promise.all(features.map(checkWebPFeatureSupport));
-  return results.every(Boolean);
-}
-
-export default checkWebPSupport;
+export const checkWebPSupport = () =>
+  Promise.all(features.map(checkWebPFeatureSupport)).then((results) =>
+    results.every(Boolean),
+  );
