@@ -1,5 +1,11 @@
 # @fepack/image
 
+## 0.0.8
+
+### Patch Changes
+
+- 295457a: refactor: remove duplicate packages and refine return types
+
 ## 0.0.7
 
 ### Patch Changes
