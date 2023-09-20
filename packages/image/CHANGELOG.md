@@ -1,5 +1,11 @@
 # @fepack/image
 
+## 0.0.9
+
+### Patch Changes
+
+- 64121c7: refactor: convert func to arrow
+
 ## 0.0.8
 
 ### Patch Changes
