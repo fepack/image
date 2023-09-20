@@ -41,6 +41,8 @@
     "build:tsc": "tsc --emitDeclarationOnly",
     "clean": "rm -rf dist",
     "copy:cts": "cp dist/index.d.ts dist/index.d.cts",
+    "lint": "eslint \"**/*.ts*\"",
+    "lint:pub": "publint --strict",
     "prepack": "pnpm build",
     "test": "vitest run --coverage",
     "test:watch": "vitest"
