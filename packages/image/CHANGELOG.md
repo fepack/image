@@ -1,5 +1,11 @@
 # @fepack/image
 
+## 0.0.10
+
+### Patch Changes
+
+- 585291a: test: unit tests for the 'load' Function
+
 ## 0.0.9
 
 ### Patch Changes
