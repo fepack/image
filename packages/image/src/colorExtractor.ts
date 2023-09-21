@@ -13,7 +13,9 @@ export const colorExtractor = (imageUrl: string, options?: PaletteOptions) => {
     .then(extractImage)
     .then((data) => {
       if (!data) {
-        return [];
+        throw new Error(
+          "Failed to extract pixel data from the image. Ensure the image URL is valid and accessible.",
+        );
       }
 
       const pixels = filterRelevantPixels(data, options?.quality);
