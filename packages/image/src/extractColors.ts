@@ -8,7 +8,7 @@ interface PaletteOptions {
  * @param {string} imageUrl - The URL of the image.
  * @param {PaletteOptions} [options] - The extraction options.
  */
-export const colorExtractor = (imageUrl: string, options?: PaletteOptions) => {
+export const extractColors = (imageUrl: string, options?: PaletteOptions) => {
   return loadImageFromUrl(imageUrl)
     .then(extractImage)
     .then((data) => {
