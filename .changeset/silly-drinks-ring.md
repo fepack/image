@@ -2,4 +2,4 @@
 "@fepack/image": patch
 ---
 
-feat: unit tests for the 'load' Function
+test: unit tests for the 'load' Function
