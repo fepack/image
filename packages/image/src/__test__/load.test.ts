@@ -15,7 +15,7 @@ class MockImage {
   public static lastInstance: MockImage;
 }
 
-describe("load function", () => {
+describe("load", () => {
   const originalImage = window.Image;
 
   beforeAll(() => {
