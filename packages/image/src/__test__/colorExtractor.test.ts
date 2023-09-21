@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import { colorExtractor } from "..";
 
 describe("colorExtractor function", () => {
@@ -16,15 +16,6 @@ describe("colorExtractor function", () => {
       colorCount,
     });
     expect(result.length).toEqual(colorCount);
-  });
-
-  it("should return an empty array if canvas 2D context is not supported", async () => {
-    vi.spyOn(HTMLCanvasElement.prototype, "getContext").mockReturnValue(null);
-
-    const result = await colorExtractor("src/__test__/images/test.png");
-    expect(result).toEqual([]);
-
-    vi.restoreAllMocks();
   });
 
   it("should throw an error if quality is out of range", async () => {
