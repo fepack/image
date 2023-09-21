@@ -1,5 +1,5 @@
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { type ImageSource, load } from "../load";
+import { type ImageSource, load } from "..";
 
 class MockImage {
   public src = "";
