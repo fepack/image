@@ -37,12 +37,12 @@ describe("load function", () => {
   });
 
   it("should load webpSrc when provided", () => {
-    const testImage: ImageSource = {
+    const imageSource: ImageSource = {
       defaultSrc: "./images/test.png",
       webpSrc: "./images/test.webp",
     };
 
-    load([testImage]);
+    load([imageSource]);
 
     expect(MockImage.lastInstance.src).toBe("./images/test.webp");
   });
