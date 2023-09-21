@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { colorExtractor } from "../";
+import { colorExtractor } from "..";
 
 describe("colorExtractor function", () => {
   it("should return an array of colors", async () => {
