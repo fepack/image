@@ -27,11 +27,11 @@ describe("load function", () => {
   });
 
   it("should load defaultSrc when webpSrc is not provided", () => {
-    const testImage: ImageSource = {
+    const imageSource: ImageSource = {
       defaultSrc: "./images/test.png",
     };
 
-    load([testImage]);
+    load([imageSource]);
 
     expect(MockImage.lastInstance.src).toBe("./images/test.png");
   });
