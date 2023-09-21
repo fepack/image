@@ -2,4 +2,4 @@
 "@fepack/image": patch
 ---
 
-feat: color extractor
+feat: add add extractColors
