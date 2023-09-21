@@ -1,5 +1,5 @@
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { type ImageSource, load } from "..";
+import { load } from "..";
 
 class MockImage {
   public src = "";
@@ -27,22 +27,22 @@ describe("load", () => {
   });
 
   it("should load defaultSrc when webpSrc is not provided", () => {
-    const imageSource: ImageSource = {
-      defaultSrc: "./images/test.png",
-    };
-
-    load([imageSource]);
+    load([
+      {
+        defaultSrc: "./images/test.png",
+      },
+    ]);
 
     expect(MockImage.lastInstance.src).toBe("./images/test.png");
   });
 
   it("should load webpSrc when provided", () => {
-    const imageSource: ImageSource = {
-      defaultSrc: "./images/test.png",
-      webpSrc: "./images/test.webp",
-    };
-
-    load([imageSource]);
+    load([
+      {
+        defaultSrc: "./images/test.png",
+        webpSrc: "./images/test.webp",
+      },
+    ]);
 
     expect(MockImage.lastInstance.src).toBe("./images/test.webp");
   });
