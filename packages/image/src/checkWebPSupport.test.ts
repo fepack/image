@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { checkWebPSupport } from "..";
+import { checkWebPSupport } from ".";
 
 describe("WebP Format Support", () => {
   test("checkWebPSupport should return a boolean", async () => {
