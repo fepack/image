@@ -1,5 +1,11 @@
 # @fepack/image
 
+## 0.0.11
+
+### Patch Changes
+
+- e3fed9d: refactor: Co-locate Test Files with Logic Files
+
 ## 0.0.10
 
 ### Patch Changes
