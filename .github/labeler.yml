@@ -1,15 +1,17 @@
 "@fepack/image":
-  - packages/image/*
+  - packages/image/**/*
+"@fepack/react-image":
+  - packages/react-image/**/*
 documentation:
-  - websites/documentation/*
+  - websites/documentation/**/*
   - "**/*.md"
 eslint:
-  - configs/eslint-config/*
+  - configs/eslint-config/**/*
 tsconfig:
-  - configs/tsconfig/*
+  - configs/tsconfig/**/*
   - tsconfig.json
 dependencies:
   - pnpm*.yaml
   - package*.json
 github:
-  - .github/*
+  - .github/**/*
