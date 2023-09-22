@@ -21,3 +21,53 @@
 </div>
 
 # @fepack/image
+
+`@fepack/image` provides tools designed to simplify image management. Explore and enhance your image handling with `@fepack/image`
+
+## Features
+
+- load
+- checkWebPSupport
+- detect
+- extractColors
+
+## Installation
+
+```shell
+npm install @fepack/image
+```
+
+```shell
+pnpm add @fepack/image
+```
+
+```shell
+yarn add @fepack/image
+```
+
+# @fepack/react-image
+
+If you're a React developer, `@fepack/react-image` provides specialized hooks and components to enhance your workflow.
+
+## Features
+
+- Load
+- useLoad
+
+## Installation
+
+```shell
+npm install @fepack/react-image
+```
+
+```shell
+pnpm add @fepack/react-image
+```
+
+```shell
+yarn add @fepack/react-image
+```
+
+## License
+
+MIT
