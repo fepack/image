@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { extractColors } from ".";
 
-describe("extractColors function", () => {
+describe("extractColors", () => {
   it("should return an array of colors", async () => {
     const result = await extractColors("src/images/test.png", {
       quality: 10,
