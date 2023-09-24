@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -125,6 +129,9 @@ importers:
       '@fepack/eslint-config':
         specifier: workspace:^
         version: link:../../configs/eslint-config
+      '@fepack/image':
+        specifier: workspace:*
+        version: link:../image
       '@fepack/tsconfig':
         specifier: workspace:*
         version: link:../../configs/tsconfig
@@ -12890,7 +12897,3 @@ packages:
   /zwitch@1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
     dev: false
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false

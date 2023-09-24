@@ -10,6 +10,7 @@
     "lint:pub": { "cache": false },
     "prepack": {
       "outputs": ["dist/**"],
+      "dependsOn": ["^prepack"],
       "cache": false
     },
     "test": {

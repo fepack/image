@@ -1,44 +1,27 @@
+import { load } from "@fepack/image";
 import type { FunctionComponent } from "react";
 import { createElement, useSyncExternalStore } from "react";
 
-type ImageSrc = HTMLImageElement["src"];
-
-type LoadOptions<TSrc extends ImageSrc> = { src: TSrc };
-type LoadResult<TSrc extends ImageSrc> = {
-  event: Event;
-  src: TSrc;
-};
-
-export const load = <TSrc extends ImageSrc>(
-  options: LoadOptions<TSrc>,
-): Promise<LoadResult<TSrc>> => {
-  const image = new Image();
-
-  return new Promise((resolve, reject) => {
-    image.onload = (event) => resolve({ event, src: options.src });
-    image.onerror = (event) => reject(event);
-
-    image.src = options.src;
-  });
-};
-
+type Src = Parameters<typeof load>[0];
+type LoadOptions<TSrc extends Src> = { src: TSrc };
 type Notify = (...args: unknown[]) => unknown;
 
-const loadCache = new Map<ImageSrc, LoadState>();
+const loadCache = new Map<Src, LoadState>();
 const loadClient = new (class LoadClient {
-  private notifiesMap = new Map<ImageSrc, Notify[]>();
+  private notifiesMap = new Map<Src, Notify[]>();
 
-  public attach<TSrc extends ImageSrc>(src: TSrc, onNotify: Notify) {
+  public attach<TSrc extends Src>(src: TSrc, onNotify: Notify) {
     const srcNotifies = this.notifiesMap.get(src);
     this.notifiesMap.set(src, [...(srcNotifies ?? []), onNotify]);
 
     const attached = {
       detach: () => this.detach(src, onNotify),
     };
+
     return attached;
   }
 
-  public detach<TSrc extends ImageSrc>(src: TSrc, onNotify: Notify) {
+  public detach<TSrc extends Src>(src: TSrc, onNotify: Notify) {
     const srcNotifies = this.notifiesMap.get(src);
 
     if (srcNotifies) {
@@ -49,7 +32,7 @@ const loadClient = new (class LoadClient {
     }
   }
 
-  public _load = <TSrc extends ImageSrc>(src: TSrc): { src: TSrc } => {
+  public _load = <TSrc extends Src>(src: TSrc): { src: TSrc } => {
     const loadStateGot = loadCache.get(src);
 
     if (loadStateGot?.error) {
@@ -65,13 +48,9 @@ const loadClient = new (class LoadClient {
 
     const newLoadState: LoadState<TSrc> = {
       src,
-      promise: load({ src })
-        .then(() => {
-          newLoadState.src = src;
-        })
-        .catch((error) => {
-          newLoadState.error = error;
-        }),
+      promise: load(src)
+        .then((image) => (newLoadState.src = image.src as TSrc))
+        .catch(() => (newLoadState.error = `${src}: load error`)),
     };
 
     loadCache.set(src, newLoadState);
@@ -79,16 +58,16 @@ const loadClient = new (class LoadClient {
   };
 })();
 
-type UseLoadOptions<TSrc extends ImageSrc> = {
+type UseLoadOptions<TSrc extends Src> = {
   src: TSrc;
 };
 
-type LoadState<TSrc extends ImageSrc = ImageSrc> = UseLoadOptions<TSrc> & {
+type LoadState<TSrc extends Src = Src> = UseLoadOptions<TSrc> & {
   promise?: Promise<unknown>;
   error?: unknown;
 };
 
-export const useLoad = <TSrc extends ImageSrc>(
+export const useLoad = <TSrc extends Src>(
   options: UseLoadOptions<TSrc>,
 ): LoadState<TSrc> =>
   useSyncExternalStore(
@@ -97,10 +76,8 @@ export const useLoad = <TSrc extends ImageSrc>(
     () => loadClient._load<TSrc>(options.src),
   );
 
-type LoadProps<TSrc extends ImageSrc> = LoadOptions<TSrc> & {
-  children: FunctionComponent<LoadState>;
+type LoadProps<TSrc extends Src> = LoadOptions<TSrc> & {
+  children: FunctionComponent<LoadState<TSrc>>;
 };
-export const Load = <TSrc extends ImageSrc>({
-  src,
-  children,
-}: LoadProps<TSrc>) => createElement(children, useLoad({ src }));
+export const Load = <TSrc extends Src>({ src, children }: LoadProps<TSrc>) =>
+  createElement(children, useLoad({ src }));

@@ -2,6 +2,10 @@
   "name": "@fepack/react-image",
   "version": "0.0.2",
   "license": "MIT",
+  "author": {
+    "name": "Jonghyeon Ko",
+    "email": "manudeli.ko@gmail.com"
+  },
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -23,10 +27,6 @@
     "dist",
     "src"
   ],
-  "author": {
-    "name": "Jonghyeon Ko",
-    "email": "manudeli.ko@gmail.com"
-  },
   "scripts": {
     "build": "tsup",
     "build:watch": "tsup --watch",
@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@fepack/eslint-config": "workspace:^",
+    "@fepack/image": "workspace:*",
     "@fepack/tsconfig": "workspace:*",
     "@types/node": "^18.16.2",
     "@types/react": "^18.2.0",

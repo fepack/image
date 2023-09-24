@@ -1,13 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { extractRGBAs } from ".";
-
-const load = (src: HTMLImageElement["src"]) =>
-  new Promise<HTMLImageElement>((resolve, reject) => {
-    const image = new Image();
-    image.onload = () => resolve(image);
-    image.onerror = () => reject();
-    image.src = src;
-  });
+import { extractRGBAs, load } from ".";
 
 describe("extractRGBAs", () => {
   it("should return an array of colors", async () => {
