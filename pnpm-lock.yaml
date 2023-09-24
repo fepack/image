@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -123,7 +127,7 @@ importers:
   packages/react-image:
     dependencies:
       '@fepack/image':
-        specifier: workspace:*
+        specifier: workspace:0.2.0
         version: link:../image
     devDependencies:
       '@fepack/eslint-config':
@@ -12894,7 +12898,3 @@ packages:
   /zwitch@1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
     dev: false
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
