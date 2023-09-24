@@ -1,6 +1,6 @@
 {
   "name": "@fepack/react-image",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "author": {
     "name": "Jonghyeon Ko",
@@ -37,7 +37,7 @@
     "type:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@fepack/image": "workspace:0.2.0"
+    "@fepack/image": "workspace:0.2.1"
   },
   "devDependencies": {
     "@fepack/eslint-config": "workspace:^",

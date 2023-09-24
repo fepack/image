@@ -1,5 +1,12 @@
 # @fepack/react-image
 
+## 0.2.1
+
+### Patch Changes
+
+- 470671a: fix(react-image): dependency @fepack/image version definitely
+  - @fepack/image@0.2.1
+
 ## 0.2.0
 
 ### Minor Changes
