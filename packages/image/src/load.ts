@@ -1,5 +1,5 @@
 /**
- * Loads the given images. If WebP is WebP source is provided, it will load that. Otherwise, it loads the default source.
+ * Loads an image from the given source URL and returns a Promise that resolves to the loaded image.
  */
 export const load = (src: HTMLImageElement["src"]) =>
   new Promise<HTMLImageElement>((resolve, reject) => {
