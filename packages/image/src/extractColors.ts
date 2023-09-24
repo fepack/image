@@ -8,8 +8,8 @@ interface PaletteOptions {
  * @param {string} imageUrl - The URL of the image.
  * @param {PaletteOptions} [options] - The extraction options.
  */
-export const extractColors = (imageUrl: string, options?: PaletteOptions) => {
-  return loadImageFromUrl(imageUrl)
+export const extractColors = (imageUrl: string, options?: PaletteOptions) =>
+  loadImageFromUrl(imageUrl)
     .then(extractImage)
     .then((data) => {
       if (!data) {
@@ -22,7 +22,6 @@ export const extractColors = (imageUrl: string, options?: PaletteOptions) => {
       const count = options?.colorCount || pixels.length;
       return pixels.slice(0, count);
     });
-};
 
 /**
  * Extracts pixel data from an image.
@@ -47,15 +46,14 @@ const extractImage = (img: HTMLImageElement) => {
  * Loads an image from a given URL.
  * @param {string} url - The URL of the image to load.
  */
-const loadImageFromUrl = (url: string) => {
-  return new Promise<HTMLImageElement>((resolve, reject) => {
+const loadImageFromUrl = (url: string) =>
+  new Promise<HTMLImageElement>((resolve, reject) => {
     const img = new Image();
     img.onload = () => resolve(img);
     img.onerror = reject;
     img.crossOrigin = "Anonymous";
     img.src = url;
   });
-};
 
 /**
  * Filters and extracts relevant pixels from image data based on quality setting.

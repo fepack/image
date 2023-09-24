@@ -18,4 +18,7 @@ module.exports = {
       extends: ["plugin:vitest/recommended"],
     },
   ],
+  rules: {
+    "arrow-body-style": ["warn", "as-needed"],
+  },
 };
