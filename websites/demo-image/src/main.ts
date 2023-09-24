@@ -1,20 +1,9 @@
 import { checkWebPSupport, load } from "@fepack/image";
 
-const images = [
-  { defaultSrc: "/options_resize.png" },
-  {
-    webpSrc: "/information_resize.webp",
-    defaultSrc: "/information_resize.png",
-  },
-];
-
-(async function () {
-  const webPSupport = await checkWebPSupport();
-
-  console.log(webPSupport);
-})();
-
-load(images);
+checkWebPSupport().then(console.log);
+load("/options_resize.png");
+load("/information_resize.webp");
+load("/information_resize.png");
 
 (document.querySelector<HTMLDivElement>("#app") as HTMLDivElement).innerHTML = `
   <div>
