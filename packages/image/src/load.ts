@@ -1,15 +1,10 @@
-export interface ImageSource {
-  defaultSrc: string;
-  webpSrc?: string;
-}
-
 /**
- * Loads the given images. If WebP is WebP source is provided, it will load that. Otherwise, it loads the default source.
- * @param {ImageSource[]} images - Array of image sources to preload.
+ * Loads an image from the given source URL and returns a Promise that resolves to the loaded image.
  */
-export const load = (images: ImageSource[]) => {
-  for (const image of images) {
-    const imageElement = new Image();
-    imageElement.src = image.webpSrc ? image.webpSrc : image.defaultSrc;
-  }
-};
+export const load = (src: HTMLImageElement["src"]) =>
+  new Promise<HTMLImageElement>((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => reject();
+    image.src = src;
+  });
