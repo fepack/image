@@ -37,7 +37,7 @@
     "type:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@fepack/image": "workspace:*"
+    "@fepack/image": "workspace:0.2.0"
   },
   "devDependencies": {
     "@fepack/eslint-config": "workspace:^",
