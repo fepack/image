@@ -125,13 +125,14 @@ importers:
         version: 0.34.4(@vitest/browser@0.34.4)(jsdom@22.1.0)(playwright@1.38.0)
 
   packages/react-image:
+    dependencies:
+      '@fepack/image':
+        specifier: workspace:*
+        version: link:../image
     devDependencies:
       '@fepack/eslint-config':
         specifier: workspace:^
         version: link:../../configs/eslint-config
-      '@fepack/image':
-        specifier: workspace:*
-        version: link:../image
       '@fepack/tsconfig':
         specifier: workspace:*
         version: link:../../configs/tsconfig

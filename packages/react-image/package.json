@@ -36,9 +36,11 @@
     "prepack": "pnpm build",
     "type:check": "tsc --noEmit"
   },
+  "dependencies": {
+    "@fepack/image": "workspace:*"
+  },
   "devDependencies": {
     "@fepack/eslint-config": "workspace:^",
-    "@fepack/image": "workspace:*",
     "@fepack/tsconfig": "workspace:*",
     "@types/node": "^18.16.2",
     "@types/react": "^18.2.0",
