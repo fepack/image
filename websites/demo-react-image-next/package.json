@@ -1,6 +1,6 @@
 {
   "name": "@fepack/demo-react-image-next",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
   "scripts": {
     "build": "next build",
@@ -12,7 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
-    "@fepack/react-image": "workspace:0.2.0",
+    "@fepack/react-image": "workspace:0.2.1",
     "@jsxcss/emotion": "^1.3.9",
     "@suspensive/react": "1.14.1",
     "next": "^13.4.4",
