@@ -20,5 +20,6 @@ module.exports = {
   ],
   rules: {
     "arrow-body-style": ["warn", "as-needed"],
+    "newline-before-return": "warn",
   },
 };
