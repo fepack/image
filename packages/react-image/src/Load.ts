@@ -32,7 +32,7 @@ const loadClient = new (class LoadClient {
     }
   }
 
-  public _load = <TSrc extends Src>(src: TSrc):  LoadState<TSrc> => {
+  public _load = <TSrc extends Src>(src: TSrc): LoadState<TSrc> => {
     const loadStateGot = loadCache.get(src);
     if (loadStateGot?.error) {
       throw loadStateGot.error;
