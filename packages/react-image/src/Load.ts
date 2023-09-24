@@ -34,14 +34,12 @@ const loadClient = new (class LoadClient {
 
   public _load = <TSrc extends Src>(src: TSrc): { src: TSrc } => {
     const loadStateGot = loadCache.get(src);
-
     if (loadStateGot?.error) {
       throw loadStateGot.error;
     }
     if (loadStateGot?.src) {
       return loadStateGot as LoadState<TSrc>;
     }
-
     if (loadStateGot?.promise) {
       throw loadStateGot.promise;
     }
@@ -52,7 +50,6 @@ const loadClient = new (class LoadClient {
         .then((image) => (newLoadState.src = image.src as TSrc))
         .catch(() => (newLoadState.error = `${src}: load error`)),
     };
-
     loadCache.set(src, newLoadState);
     throw newLoadState.promise;
   };
