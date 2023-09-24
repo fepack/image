@@ -33,15 +33,15 @@ const loadClient = new (class LoadClient {
   }
 
   public _load = <TSrc extends Src>(src: TSrc): LoadState<TSrc> => {
-    const loadStateGot = loadCache.get(src);
-    if (loadStateGot?.error) {
-      throw loadStateGot.error;
+    const loadState = loadCache.get(src);
+    if (loadState?.error) {
+      throw loadState.error;
     }
-    if (loadStateGot?.src) {
-      return loadStateGot as LoadState<TSrc>;
+    if (loadState?.src) {
+      return loadState as LoadState<TSrc>;
     }
-    if (loadStateGot?.promise) {
-      throw loadStateGot.promise;
+    if (loadState?.promise) {
+      throw loadState.promise;
     }
 
     const newLoadState: LoadState<TSrc> = {
