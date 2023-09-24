@@ -2,4 +2,4 @@
 "@fepack/image": minor
 ---
 
-feat: add add extractColors
+feat: add add extractRGBAs
