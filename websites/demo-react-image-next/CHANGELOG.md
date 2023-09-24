@@ -1,5 +1,12 @@
 # @fepack/demo-react-image-next
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [36e57de]
+  - @fepack/react-image@0.2.0
+
 ## 0.0.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @fepack/image
 
+## 0.2.0
+
+### Minor Changes
+
+- 36e57de: feat(image): add `LoadClient`, update `load` can return image, export all public apis of @fepack/image in @fepack/react-image
+
 ## 0.1.0
 
 ### Minor Changes
