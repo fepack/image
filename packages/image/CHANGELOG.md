@@ -1,5 +1,11 @@
 # @fepack/image
 
+## 0.1.0
+
+### Minor Changes
+
+- ac8c888: feat: add add extractRGBAs
+
 ## 0.0.11
 
 ### Patch Changes
