@@ -1,6 +1,6 @@
 {
   "name": "@fepack/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "files": [
     "react-js.js",

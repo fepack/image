@@ -1,6 +1,6 @@
 {
   "name": "@fepack/eslint-config-ts",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "main": "typescript.js",
   "files": [
