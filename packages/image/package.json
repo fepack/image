@@ -31,7 +31,7 @@
     },
     "./package.json": "./package.json"
   },
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
@@ -42,23 +42,15 @@
     "build:watch": "tsup --watch",
     "clean": "rimraf ./dist && rimraf ./coverage",
     "lint": "eslint \"**/*.ts*\"",
-    "lint:pack": "packlint sort -R",
     "lint:pub": "publint --strict",
     "prepack": "pnpm build",
     "test": "vitest run --coverage",
-    "test:watch": "vitest"
+    "test:watch": "vitest --ui --coverage.enabled=true",
+    "type:check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@fepack/eslint-config-js": "workspace:*",
-    "@fepack/eslint-config-ts": "workspace:*",
-    "@fepack/tsconfig": "workspace:*",
-    "@types/node": "^20.6.2",
-    "@vitest/browser": "^0.34.4",
-    "@vitest/coverage-istanbul": "^0.34.4",
-    "jsdom": "^22.1.0",
-    "playwright": "^1.38.0",
-    "tsup": "^7.1.0",
-    "vitest": "^0.34.3"
+    "@types/node": "^18.16.2",
+    "playwright": "^1.38.0"
   },
   "publishConfig": {
     "access": "public"
