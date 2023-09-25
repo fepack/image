@@ -1,5 +1,11 @@
 # @fepack/image
 
+## 0.2.3
+
+### Patch Changes
+
+- f7b6418: docs: README with Information on @fepack/image and @fepack/react-image
+
 ## 0.2.2
 
 ### Patch Changes
