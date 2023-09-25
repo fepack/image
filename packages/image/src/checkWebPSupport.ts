@@ -1,3 +1,5 @@
+import { load } from ".";
+
 /**
  * Checks for various WebP features support in the browser.
  * @see https://developers.google.com/speed/webp/faq?in_your_own_javascript
@@ -18,12 +20,9 @@ type Feature = keyof typeof kTestImages;
  * @param feature - The WebP feature to check for.
  */
 const checkWebPFeatureSupport = (feature: Feature) =>
-  new Promise<boolean>((resolve) => {
-    const image = new Image();
-    image.onload = () => resolve(image.width > 0 && image.height > 0);
-    image.onerror = () => resolve(false);
-    image.src = "data:image/webp;base64," + kTestImages[feature];
-  });
+  load("data:image/webp;base64," + kTestImages[feature])
+    .then((image) => image.width > 0 && image.height > 0)
+    .catch(() => false);
 
 const features = Object.keys(kTestImages).filter((key): key is Feature =>
   Object.prototype.hasOwnProperty.call(kTestImages, key),
