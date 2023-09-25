@@ -1,5 +1,12 @@
 # @fepack/image
 
+## 0.2.2
+
+### Patch Changes
+
+- 534044f: refactor: Build System - Switch from esbuild to tsup
+- 96e6eef: refactor: WebP feature detection using the load utility
+
 ## 0.2.1
 
 ## 0.2.0
