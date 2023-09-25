@@ -22,14 +22,17 @@
 
 # @fepack/image
 
-`@fepack/image` provides tools designed to simplify image management. Explore and enhance your image handling with `@fepack/image`
+[![npm version](https://img.shields.io/npm/v/@fepack/image?color=4C4885)](https://www.npmjs.com/package/@fepack/image)
+
+`@fepack/image` offers a collection of utilities designed for easy image control.
 
 ## Features
 
 - load
+- LoadClient
 - checkWebPSupport
 - detect
-- extractColors
+- extractRGBs
 
 ## Installation
 
@@ -47,7 +50,9 @@ yarn add @fepack/image
 
 # @fepack/react-image
 
-If you're a React developer, `@fepack/react-image` provides specialized hooks and components to enhance your workflow.
+[![npm version](https://img.shields.io/npm/v/@fepack/image?color=4C4885)](https://www.npmjs.com/package/@fepack/react-image)
+
+For React developers, `@fepack/react-image` provides hooks and components tailored for your workflow with images.
 
 ## Features
 
