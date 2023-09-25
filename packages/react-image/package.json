@@ -1,6 +1,16 @@
 {
   "name": "@fepack/react-image",
   "version": "0.2.1",
+  "description": "easy image control for React",
+  "keywords": [
+    "fepack",
+    "react-image"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fepack/image.git",
+    "directory": "packages/react-image"
+  },
   "license": "MIT",
   "author": {
     "name": "Jonghyeon Ko",
@@ -40,14 +50,14 @@
     "@fepack/image": "workspace:0.2.1"
   },
   "devDependencies": {
-    "@fepack/eslint-config": "workspace:^",
-    "@fepack/tsconfig": "workspace:*",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "@types/node": "^18.16.2",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.1",
+    "@types/testing-library__jest-dom": "^5.14.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tsup": "^7.1.0"
+    "react-dom": "^18.2.0"
   },
   "peerDependencies": {
     "react": "^16.8 || ^17 || ^18"

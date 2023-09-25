@@ -31,16 +31,27 @@
     "lint:pub": "turbo run lint:pub",
     "prepack": "turbo run prepack",
     "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
     "type:check": "turbo run type:check --parallel"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
+    "@fepack/eslint-config": "workspace:*",
+    "@fepack/eslint-config-js": "workspace:*",
+    "@fepack/eslint-config-ts": "workspace:*",
+    "@fepack/tsconfig": "workspace:*",
+    "@vitest/browser": "^0.34.4",
+    "@vitest/coverage-istanbul": "^0.34.4",
+    "@vitest/ui": "^0.34.4",
     "eslint": "^7.32.0",
+    "jsdom": "^22.1.0",
     "packlint": "^0.2.4",
     "prettier": "^2.5.1",
     "publint": "^0.2.2",
     "rimraf": "^5.0.1",
+    "tsup": "^7.1.0",
     "turbo": "latest",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "vitest": "^0.34.3"
   }
 }

@@ -7,5 +7,13 @@
   "access": "restricted",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@fepack/demo-image"]
+  "ignore": [
+    "@fepack/eslint-config",
+    "@fepack/eslint-config-js",
+    "@fepack/eslint-config-ts",
+    "@fepack/tsconfig",
+    "@fepack/demo-image",
+    "@fepack/demo-react-image-next",
+    "@fepack/image-documentation"
+  ]
 }
