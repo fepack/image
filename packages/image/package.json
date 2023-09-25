@@ -1,11 +1,10 @@
 {
   "name": "@fepack/image",
   "version": "0.2.1",
-  "description": "Image preloader for fepack",
+  "description": "easy image control",
   "keywords": [
     "fepack",
-    "image",
-    "preloader"
+    "image"
   ],
   "repository": {
     "type": "git",
@@ -13,7 +12,10 @@
     "directory": "packages/image"
   },
   "license": "MIT",
-  "author": "tooooo1",
+  "author": {
+    "name": "Chung-il Jung",
+    "email": "jungchungil7@gmail.com"
+  },
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -36,12 +38,11 @@
     "src"
   ],
   "scripts": {
-    "build": "pnpm clean && pnpm build:tsc && pnpm build:js && pnpm copy:cts",
-    "build:js": "node ./esbuild.config.js",
-    "build:tsc": "tsc --emitDeclarationOnly",
-    "clean": "rm -rf dist",
-    "copy:cts": "cp dist/index.d.ts dist/index.d.cts",
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "clean": "rimraf ./dist && rimraf ./coverage",
     "lint": "eslint \"**/*.ts*\"",
+    "lint:pack": "packlint sort -R",
     "lint:pub": "publint --strict",
     "prepack": "pnpm build",
     "test": "vitest run --coverage",
@@ -54,9 +55,9 @@
     "@types/node": "^20.6.2",
     "@vitest/browser": "^0.34.4",
     "@vitest/coverage-istanbul": "^0.34.4",
-    "esbuild": "^0.18.11",
     "jsdom": "^22.1.0",
     "playwright": "^1.38.0",
+    "tsup": "^7.1.0",
     "vitest": "^0.34.3"
   },
   "publishConfig": {
