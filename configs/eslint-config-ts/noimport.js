@@ -11,8 +11,9 @@ module.exports = {
   rules: {
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-unused-vars": "error",
-    "jsdoc/require-returns": "off",
     "jsdoc/require-description": "warn",
+    "jsdoc/require-returns": "off",
+    "jsdoc/require-jsdoc": "off",
     "jsdoc/check-param-names": "error",
   },
 };
