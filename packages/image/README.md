@@ -1,47 +1,23 @@
-# @fepack/image
+# Introduction
 
-image는 웹페이지의 로딩 시간을 줄이기 위해 사용됩니다. 이 패키지는 웹페이지에 사용되는 이미지들을 미리 로드하며, WEBP 이미지 포맷을 지원합니다.
+## @fepack/image
 
-## 설치
+`@fepack/image` offers a collection of utilities designed for easy image control.
 
-이 패키지를 사용하려면 먼저 프로젝트에 설치해야 합니다.
+[![npm version](https://img.shields.io/npm/v/@fepack/image?color=4C4885)](https://www.npmjs.com/package/@fepack/image)
 
-```
-pnpm add -D @fepack/image
-```
+### Installation
 
-## 기능
+To install the latest stable version of `@fepack/image`, run the following commands:
 
-1. **이미지 포맷 지원 확인**: 현재 브라우저가 `webp` 이미지 포맷을 지원하는지 확인합니다.
-2. **이미지 로딩**: 지원하는 포맷의 이미지를 로딩합니다.
-
-## 사용법
-
-### 이미지 포맷 지원 확인
-
-```js
-import { isSupportWebP } from "@fepack/image";
-
-const isSupportedWebp = await isSupportWebP();
-if (isSupportedWebp) {
-  console.log("This browser supports webp format.");
-} else {
-  console.log("This browser does not support webp format.");
-}
+```shell
+npm install @fepack/image
 ```
 
-### 이미지 로딩
+```shell
+pnpm add @fepack/image
+```
 
-```js
-import { load } from "@fepack/image";
-
-const images = [
-  {
-    defaultSrc: "path/to/default/image.jpg",
-    webpSrc: "path/to/image.webp",
-  },
-  // ... more images
-];
-
-load(images);
+```shell
+yarn add @fepack/image
 ```
