@@ -1,4 +1,4 @@
-import { load } from ".";
+import { load } from "..";
 
 /**
  * Checks for various WebP features support in the browser.
