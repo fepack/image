@@ -1,5 +1,12 @@
 # @fepack/react-image
 
+## 0.2.4
+
+### Patch Changes
+
+- Updated dependencies [3aa772e]
+  - @fepack/image@0.2.4
+
 ## 0.2.3
 
 ### Patch Changes

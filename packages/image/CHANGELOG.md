@@ -1,5 +1,11 @@
 # @fepack/image
 
+## 0.2.4
+
+### Patch Changes
+
+- 3aa772e: refactor(image): JSDoc Annotations Update
+
 ## 0.2.3
 
 ### Patch Changes
