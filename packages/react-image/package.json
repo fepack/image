@@ -1,6 +1,6 @@
 {
   "name": "@fepack/react-image",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "easy image control for React",
   "keywords": [
     "fepack",
@@ -47,7 +47,7 @@
     "type:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@fepack/image": "workspace:0.2.3"
+    "@fepack/image": "workspace:0.2.4"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
