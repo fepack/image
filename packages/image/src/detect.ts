@@ -40,8 +40,7 @@ const FILE_TYPE_KEYS = Object.keys(
 /**
  * Inspects the first few bytes of a buffer to determine if
  * it matches a known file signature.
- *
- * @param {Buffer} buffer - The buffer containing the file's first few bytes.
+ * @param buffer - The buffer containing the file's first few bytes.
  * @returns The detected MIME type or null if no known signature is matched.
  */
 export const detect = (buffer: Buffer) => {
