@@ -1,17 +1,16 @@
 type RGBA = readonly [number, number, number, number];
 type ExtractRGBAsOptions = { quality: number };
 const initialOptions: ExtractRGBAsOptions = { quality: 100 };
+
 /**
  * Filters and extracts relevant pixels from image data based on quality setting.
+ * @param image - The image data.
+ * @param [options] - The options to define the quality of extraction.
+ * @throws Will throw an error if quality is not between 1 and 100.
+ * @returns An array of RGBA values.
  */
 export const extractRGBAs = (
-  /**
-   * The image pixel data.
-   */
   image: HTMLImageElement,
-  /**
-   * Quality setting for filtering pixels. Higher values mean more pixels are processed. Range: [1, 100]
-   */
   options = initialOptions,
 ) => {
   if (options.quality < 1 || options.quality > 100) {
@@ -36,13 +35,11 @@ export const extractRGBAs = (
 
 /**
  * Extracts pixel data from an image.
+ * @param image - The image element.
+ * @throws Will throw an error if canvasRenderingContext2D is not supported.
+ * @returns The pixel data of the image.
  */
-const extractUint8ClampedArray = (
-  /**
-   * The image element
-   */
-  image: HTMLImageElement,
-) => {
+const extractUint8ClampedArray = (image: HTMLImageElement) => {
   const canvas = document.createElement("canvas");
   const canvasRenderingContext2D = canvas.getContext("2d");
   if (!canvasRenderingContext2D) {

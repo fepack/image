@@ -6,6 +6,7 @@
     "fepack",
     "image"
   ],
+  "homepage": "https://image.fepack.org",
   "repository": {
     "type": "git",
     "url": "https://github.com/fepack/image.git",
@@ -32,6 +33,7 @@
     "./package.json": "./package.json"
   },
   "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
