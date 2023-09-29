@@ -1,9 +1,6 @@
 import { LoadClient, type LoadSrc, type LoadState } from "@fepack/image";
-import {
-  type FunctionComponent,
-  createElement,
-  useSyncExternalStore,
-} from "react";
+import { type FunctionComponent, createElement } from "react";
+import { useSyncExternalStore } from "use-sync-external-store/shim";
 
 const loadClient = new LoadClient();
 

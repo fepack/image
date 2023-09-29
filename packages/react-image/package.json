@@ -47,7 +47,8 @@
     "type:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@fepack/image": "workspace:0.2.4"
+    "@fepack/image": "workspace:0.2.4",
+    "use-sync-external-store": "^1.2.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -56,6 +57,7 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.1",
     "@types/testing-library__jest-dom": "^5.14.5",
+    "@types/use-sync-external-store": "^0.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
