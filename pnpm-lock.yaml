@@ -138,6 +138,9 @@ importers:
       '@fepack/image':
         specifier: workspace:0.2.4
         version: link:../image
+      use-sync-external-store:
+        specifier: ^1.2.0
+        version: 1.2.0(react@18.2.0)
     devDependencies:
       '@testing-library/jest-dom':
         specifier: ^5.16.5
@@ -157,6 +160,9 @@ importers:
       '@types/testing-library__jest-dom':
         specifier: ^5.14.5
         version: 5.14.9
+      '@types/use-sync-external-store':
+        specifier: ^0.0.4
+        version: 0.0.4
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -4045,6 +4051,10 @@ packages:
   /@types/unist@2.0.8:
     resolution: {integrity: sha512-d0XxK3YTObnWVp6rZuev3c49+j4Lo8g4L1ZRm9z5L0xpoZycUPshHgczK5gsUMaZOstjVYYi09p5gYvUtfChYw==}
     dev: false
+
+  /@types/use-sync-external-store@0.0.4:
+    resolution: {integrity: sha512-DMBc2WDEfaGsWXqH/Sk2oBaUkvlUwqgt/YEygpqX0MaiEjqR7afd1QgE4Pq2zBr/TRz0Mpu92eBBo5UQjtTD5Q==}
+    dev: true
 
   /@types/ws@8.5.5:
     resolution: {integrity: sha512-lwhs8hktwxSjf9UaZ9tG5M03PGogvFaH8gUgLNbN9HKIg0dvv6q+gkSuJ8HN4/VbyxkuLzCjlN7GquQ0gUJfIg==}
@@ -12625,6 +12635,14 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 17.0.2
+    dev: false
+
+  /use-sync-external-store@1.2.0(react@18.2.0):
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /util-deprecate@1.0.2:
