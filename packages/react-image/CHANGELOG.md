@@ -1,5 +1,12 @@
 # @fepack/react-image
 
+## 0.2.5
+
+### Patch Changes
+
+- ab37603: fix(react-image): support under react 18
+  - @fepack/image@0.2.5
+
 ## 0.2.4
 
 ### Patch Changes
