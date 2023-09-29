@@ -1,6 +1,6 @@
 {
   "name": "@fepack/react-image",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "easy image control for React",
   "keywords": [
     "fepack",
@@ -47,7 +47,7 @@
     "type:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@fepack/image": "workspace:0.2.4",
+    "@fepack/image": "workspace:0.2.5",
     "use-sync-external-store": "^1.2.0"
   },
   "devDependencies": {
