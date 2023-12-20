@@ -1,6 +1,6 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
-  extends: ["@fepack/eslint-config-ts"],
-  ignorePatterns: ["*.js*", "dist", "coverage"],
-};
+  extends: ['@fepack/eslint-config-ts'],
+  ignorePatterns: ['dist', 'coverage'],
+}

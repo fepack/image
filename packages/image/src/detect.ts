@@ -38,16 +38,16 @@ const FILE_TYPE_KEYS = Object.keys(
 ) as readonly (keyof typeof FILE_TYPES)[];
 
 /**
- * Inspects the first few bytes of a buffer to determine if
+ * Inspects the first few bytes of a uint8Array to determine if
  * it matches a known file signature.
- * @param buffer - The buffer containing the file's first few bytes.
+ * @param uint8Array
  * @returns The detected MIME type or null if no known signature is matched.
  */
-export const detect = (buffer: Buffer) => {
+export const detect = (uint8Array: Uint8Array) => {
   for (const key of FILE_TYPE_KEYS) {
     const { mime, signature } = FILE_TYPES[key];
 
-    if (signature.every((byte, index) => byte === buffer[index])) {
+    if (signature.every((byte, index) => byte === uint8Array[index])) {
       return mime;
     }
   }

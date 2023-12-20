@@ -13,9 +13,6 @@
     "@fepack/image": "workspace:^"
   },
   "devDependencies": {
-    "@fepack/eslint-config-js": "workspace:*",
-    "@fepack/eslint-config-ts": "workspace:*",
-    "@fepack/tsconfig": "workspace:*",
     "vite": "^4.4.5"
   }
 }

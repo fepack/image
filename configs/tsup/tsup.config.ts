@@ -1,4 +1,4 @@
-import { options } from "@fepack/tsup";
 import { defineConfig } from "tsup";
+import { options } from "./src";
 
 export default defineConfig(options);
