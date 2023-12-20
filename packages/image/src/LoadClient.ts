@@ -2,15 +2,15 @@ import { load } from "./load";
 
 export type LoadSrc = Parameters<typeof load>[0];
 
-export type LoadState<TLoadSrc extends LoadSrc> = {
-  src: TLoadSrc;
+export type LoadState = {
+  image: HTMLImageElement;
   promise?: Promise<unknown>;
   error?: unknown;
 };
 
 type Notify = (...args: unknown[]) => unknown;
 export class LoadClient {
-  private loadCache = new Map<LoadSrc, LoadState<LoadSrc>>();
+  private loadCache = new Map<LoadSrc, LoadState>();
   private notifiesMap = new Map<LoadSrc, Notify[]>();
 
   attach(src: LoadSrc, notify: Notify) {
@@ -38,17 +38,17 @@ export class LoadClient {
     if (loadState?.error) {
       throw loadState.error;
     }
-    if (loadState?.src) {
-      return loadState as LoadState<TLoadSrc>;
+    if (loadState?.image) {
+      return loadState.image;
     }
     if (loadState?.promise) {
       throw loadState.promise;
     }
 
-    const newLoadState: LoadState<TLoadSrc> = {
-      src,
+    const newLoadState: LoadState = {
+      image: undefined as unknown as HTMLImageElement,
       promise: load(src)
-        .then((image) => (newLoadState.src = image.src as TLoadSrc))
+        .then((image) => (newLoadState.image = image))
         .catch(() => (newLoadState.error = `${src}: load error`)),
     };
 

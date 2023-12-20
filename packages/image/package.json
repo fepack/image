@@ -51,8 +51,7 @@
     "type:check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/node": "^18.16.2",
-    "playwright": "^1.38.0"
+    "@types/node": "^18.16.2"
   },
   "publishConfig": {
     "access": "public"
