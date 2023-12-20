@@ -30,8 +30,8 @@ importers:
         specifier: ^0.34.4
         version: 0.34.4(vitest@0.34.4)
       '@vitest/ui':
-        specifier: ^0.34.4
-        version: 0.34.4(vitest@0.34.4)
+        specifier: ^0.34.7
+        version: 0.34.7(vitest@0.34.4)
       eslint:
         specifier: ^7.32.0
         version: 7.32.0
@@ -58,13 +58,13 @@ importers:
         version: 7.2.0(typescript@5.1.6)
       turbo:
         specifier: latest
-        version: 1.10.16
+        version: 1.11.2
       typescript:
         specifier: 5.1.6
         version: 5.1.6
       vitest:
         specifier: ^0.34.3
-        version: 0.34.4(@vitest/browser@0.34.4)(@vitest/ui@0.34.4)(jsdom@22.1.0)(playwright@1.40.1)
+        version: 0.34.4(@vitest/browser@0.34.4)(@vitest/ui@0.34.7)(jsdom@22.1.0)(playwright@1.40.1)
 
   configs/eslint-config:
     dependencies:
@@ -4260,7 +4260,7 @@ packages:
       magic-string: 0.30.3
       modern-node-polyfills: 0.1.3(rollup@2.79.1)
       sirv: 2.0.3
-      vitest: 0.34.4(@vitest/browser@0.34.4)(@vitest/ui@0.34.4)(jsdom@22.1.0)(playwright@1.40.1)
+      vitest: 0.34.4(@vitest/browser@0.34.4)(@vitest/ui@0.34.7)(jsdom@22.1.0)(playwright@1.40.1)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -4277,7 +4277,7 @@ packages:
       istanbul-reports: 3.1.6
       picocolors: 1.0.0
       test-exclude: 6.0.0
-      vitest: 0.34.4(@vitest/browser@0.34.4)(@vitest/ui@0.34.4)(jsdom@22.1.0)(playwright@1.40.1)
+      vitest: 0.34.4(@vitest/browser@0.34.4)(@vitest/ui@0.34.7)(jsdom@22.1.0)(playwright@1.40.1)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4312,23 +4312,31 @@ packages:
       tinyspy: 2.1.1
     dev: true
 
-  /@vitest/ui@0.34.4(vitest@0.34.4):
-    resolution: {integrity: sha512-gz0m0r9ErFG32r+DRdwuLJpUDpbi+jrMcw9nJZAau48Fs4LDIBg561PvczvGqyYxzbyFU7vgkSnSlSDfK0d53w==}
+  /@vitest/ui@0.34.7(vitest@0.34.4):
+    resolution: {integrity: sha512-iizUu9R5Rsvsq8FtdJ0suMqEfIsIIzziqnasMHe4VH8vG+FnZSA3UAtCHx6rLeRupIFVAVg7bptMmuvMcsn8WQ==}
     peerDependencies:
       vitest: '>=0.30.1 <1'
     dependencies:
-      '@vitest/utils': 0.34.4
+      '@vitest/utils': 0.34.7
       fast-glob: 3.3.1
       fflate: 0.8.1
       flatted: 3.2.7
       pathe: 1.1.1
       picocolors: 1.0.0
       sirv: 2.0.3
-      vitest: 0.34.4(@vitest/browser@0.34.4)(@vitest/ui@0.34.4)(jsdom@22.1.0)(playwright@1.40.1)
+      vitest: 0.34.4(@vitest/browser@0.34.4)(@vitest/ui@0.34.7)(jsdom@22.1.0)(playwright@1.40.1)
     dev: true
 
   /@vitest/utils@0.34.4:
     resolution: {integrity: sha512-yR2+5CHhp/K4ySY0Qtd+CAL9f5Yh1aXrKfAT42bq6CtlGPh92jIDDDSg7ydlRow1CP+dys4TrOrbELOyNInHSg==}
+    dependencies:
+      diff-sequences: 29.6.3
+      loupe: 2.3.6
+      pretty-format: 29.7.0
+    dev: true
+
+  /@vitest/utils@0.34.7:
+    resolution: {integrity: sha512-ziAavQLpCYS9sLOorGrFFKmy2gnfiNU0ZJ15TsMz/K92NAPS/rp9K4z6AJQQk5Y8adCy4Iwpxy7pQumQ/psnRg==}
     dependencies:
       diff-sequences: 29.6.3
       loupe: 2.3.6
@@ -6957,7 +6965,7 @@ packages:
       '@typescript-eslint/utils': 6.7.0(eslint@8.50.0)(typescript@5.2.2)
       eslint: 8.50.0
       typescript: 5.2.2
-      vitest: 0.34.4(@vitest/browser@0.34.4)(@vitest/ui@0.34.4)(jsdom@22.1.0)(playwright@1.40.1)
+      vitest: 0.34.4(@vitest/browser@0.34.4)(@vitest/ui@0.34.7)(jsdom@22.1.0)(playwright@1.40.1)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -9089,6 +9097,7 @@ packages:
 
   /loupe@2.3.6:
     resolution: {integrity: sha512-RaPMZKiMy8/JruncMU5Bt6na1eftNoo++R4Y+N2FrxkDVTrGvcyzFTsaGif4QTeKESheMGegbhw6iUAq+5A8zA==}
+    deprecated: Please upgrade to 2.3.7 which fixes GHSA-4q6p-r6v2-jvc5
     dependencies:
       get-func-name: 2.0.0
     dev: true
@@ -12211,64 +12220,64 @@ packages:
       yargs: 17.7.2
     dev: true
 
-  /turbo-darwin-64@1.10.16:
-    resolution: {integrity: sha512-+Jk91FNcp9e9NCLYlvDDlp2HwEDp14F9N42IoW3dmHI5ZkGSXzalbhVcrx3DOox3QfiNUHxzWg4d7CnVNCuuMg==}
+  /turbo-darwin-64@1.11.2:
+    resolution: {integrity: sha512-toFmRG/adriZY3hOps7nYCfqHAS+Ci6xqgX3fbo82kkLpC6OBzcXnleSwuPqjHVAaRNhVoB83L5njcE9Qwi2og==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-darwin-arm64@1.10.16:
-    resolution: {integrity: sha512-jqGpFZipIivkRp/i+jnL8npX0VssE6IAVNKtu573LXtssZdV/S+fRGYA16tI46xJGxSAivrZ/IcgZrV6Jk80bw==}
+  /turbo-darwin-arm64@1.11.2:
+    resolution: {integrity: sha512-FCsEDZ8BUSFYEOSC3rrARQrj7x2VOrmVcfrMUIhexTxproRh4QyMxLfr6LALk4ymx6jbDCxWa6Szal8ckldFbA==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-64@1.10.16:
-    resolution: {integrity: sha512-PpqEZHwLoizQ6sTUvmImcRmACyRk9EWLXGlqceogPZsJ1jTRK3sfcF9fC2W56zkSIzuLEP07k5kl+ZxJd8JMcg==}
+  /turbo-linux-64@1.11.2:
+    resolution: {integrity: sha512-Vzda/o/QyEske5CxLf0wcu7UUS+7zB90GgHZV4tyN+WZtoouTvbwuvZ3V6b5Wgd3OJ/JwWR0CXDK7Sf4VEMr7A==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-arm64@1.10.16:
-    resolution: {integrity: sha512-TMjFYz8to1QE0fKVXCIvG/4giyfnmqcQIwjdNfJvKjBxn22PpbjeuFuQ5kNXshUTRaTJihFbuuCcb5OYFNx4uw==}
+  /turbo-linux-arm64@1.11.2:
+    resolution: {integrity: sha512-bRLwovQRz0yxDZrM4tQEAYV0fBHEaTzUF0JZ8RG1UmZt/CqtpnUrJpYb1VK8hj1z46z9YehARpYCwQ2K0qU4yw==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-64@1.10.16:
-    resolution: {integrity: sha512-+jsf68krs0N66FfC4/zZvioUap/Tq3sPFumnMV+EBo8jFdqs4yehd6+MxIwYTjSQLIcpH8KoNMB0gQYhJRLZzw==}
+  /turbo-windows-64@1.11.2:
+    resolution: {integrity: sha512-LgTWqkHAKgyVuLYcEPxZVGPInTjjeCnN5KQMdJ4uQZ+xMDROvMFS2rM93iQl4ieDJgidwHCxxCxaU9u8c3d/Kg==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-arm64@1.10.16:
-    resolution: {integrity: sha512-sKm3hcMM1bl0B3PLG4ifidicOGfoJmOEacM5JtgBkYM48ncMHjkHfFY7HrJHZHUnXM4l05RQTpLFoOl/uIo2HQ==}
+  /turbo-windows-arm64@1.11.2:
+    resolution: {integrity: sha512-829aVBU7IX0c/B4G7g1VI8KniAGutHhIupkYMgF6xPkYVev2G3MYe6DMS/vsLt9GGM9ulDtdWxWrH5P2ngK8IQ==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo@1.10.16:
-    resolution: {integrity: sha512-2CEaK4FIuSZiP83iFa9GqMTQhroW2QryckVqUydmg4tx78baftTOS0O+oDAhvo9r9Nit4xUEtC1RAHoqs6ZEtg==}
+  /turbo@1.11.2:
+    resolution: {integrity: sha512-jPC7LVQJzebs5gWf8FmEvsvXGNyKbN+O9qpvv98xpNaM59aS0/Irhd0H0KbcqnXfsz7ETlzOC3R+xFWthC4Z8A==}
     hasBin: true
     optionalDependencies:
-      turbo-darwin-64: 1.10.16
-      turbo-darwin-arm64: 1.10.16
-      turbo-linux-64: 1.10.16
-      turbo-linux-arm64: 1.10.16
-      turbo-windows-64: 1.10.16
-      turbo-windows-arm64: 1.10.16
+      turbo-darwin-64: 1.11.2
+      turbo-darwin-arm64: 1.11.2
+      turbo-linux-64: 1.11.2
+      turbo-linux-arm64: 1.11.2
+      turbo-windows-64: 1.11.2
+      turbo-windows-arm64: 1.11.2
     dev: true
 
   /typanion@3.14.0:
@@ -12746,7 +12755,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@0.34.4(@vitest/browser@0.34.4)(@vitest/ui@0.34.4)(jsdom@22.1.0)(playwright@1.40.1):
+  /vitest@0.34.4(@vitest/browser@0.34.4)(@vitest/ui@0.34.7)(jsdom@22.1.0)(playwright@1.40.1):
     resolution: {integrity: sha512-SE/laOsB6995QlbSE6BtkpXDeVNLJc1u2LHRG/OpnN4RsRzM3GQm4nm3PQCK5OBtrsUqnhzLdnT7se3aeNGdlw==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -12785,7 +12794,7 @@ packages:
       '@vitest/runner': 0.34.4
       '@vitest/snapshot': 0.34.4
       '@vitest/spy': 0.34.4
-      '@vitest/ui': 0.34.4(vitest@0.34.4)
+      '@vitest/ui': 0.34.7(vitest@0.34.4)
       '@vitest/utils': 0.34.4
       acorn: 8.10.0
       acorn-walk: 8.2.0
