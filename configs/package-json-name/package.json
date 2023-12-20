@@ -1,22 +1,7 @@
 {
-  "name": "@fepack/image",
-  "version": "0.2.5",
-  "description": "easy image control",
-  "keywords": [
-    "fepack",
-    "image"
-  ],
-  "homepage": "https://image.fepack.org",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fepack/image.git",
-    "directory": "packages/image"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Chung-il Jung",
-    "email": "jungchungil7@gmail.com"
-  },
+  "name": "@fepack/package-json-name",
+  "version": "0.0.0",
+  "private": true,
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -35,10 +20,6 @@
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
   "scripts": {
     "build": "tsup",
     "build:watch": "tsup --watch",
@@ -47,15 +28,9 @@
     "lint:attw": "attw --pack",
     "lint:pub": "publint --strict",
     "prepack": "pnpm build",
-    "test": "vitest run --coverage",
-    "test:watch": "vitest --ui --coverage.enabled=true",
     "type:check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@fepack/package-json-name": "workspace:*",
     "@fepack/tsup": "workspace:*"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

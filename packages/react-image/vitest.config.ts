@@ -1,11 +1,15 @@
+import { packageJsonName } from "@fepack/package-json-name";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
-    name: "@fepack/react-image",
+    name: packageJsonName(),
     dir: "./src",
     environment: "jsdom",
     globals: true,
-    coverage: { provider: "istanbul" },
+    setupFiles: "./vitest.setup.ts",
+    coverage: {
+      provider: "istanbul",
+    },
   },
 });

@@ -33,8 +33,8 @@ export default function Home() {
         onChange={(e) => setSize(Number(e.target.value))}
       />
 
-      <Suspense.CSROnly fallback={"image loading..."}>
-        <Load src={"/images/test.png"}>
+      <Suspense.CSROnly fallback="image loading...">
+        <Load src="/images/test.png">
           {(image) => (
             <div
               style={{

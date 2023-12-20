@@ -1,5 +1,7 @@
 {
   "extends": "@fepack/tsconfig/react-library.json",
   "include": ["."],
-  "compilerOptions": {}
+  "compilerOptions": {
+    "types": ["@testing-library/jest-dom/vitest"]
+  }
 }
