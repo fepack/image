@@ -1,9 +1,5 @@
 import { LoadClient, type LoadSrc } from "@fepack/image";
-import {
-  type FunctionComponent,
-  createElement,
-  useSyncExternalStore,
-} from "react";
+import { ReactNode, useSyncExternalStore } from "react";
 
 const loadClient = new LoadClient();
 
@@ -21,9 +17,9 @@ export const useLoad = <TLoadSrc extends LoadSrc>(
 
 type LoadProps<TLoadSrc extends LoadSrc> = {
   src: TLoadSrc;
-  children: FunctionComponent<HTMLImageElement>;
+  children: (loadedImage: HTMLImageElement) => ReactNode;
 };
 export const Load = <TLoadSrc extends LoadSrc>({
   src,
   children,
-}: LoadProps<TLoadSrc>) => createElement(children, useLoad({ src }));
+}: LoadProps<TLoadSrc>) => children(useLoad({ src }));

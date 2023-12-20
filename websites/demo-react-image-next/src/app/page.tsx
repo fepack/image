@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Spinner } from "~/components/uis";
 
 export default function Home() {
-  const [size, setSize] = useState(1);
+  const [size, setSize] = useState(8);
 
   return (
     <div>
