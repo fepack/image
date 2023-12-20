@@ -12,7 +12,7 @@ export default function Page() {
       <Area title="Load">
         <Suspense.CSROnly fallback={<Spinner />}>
           <Load src="https://ik.imagekit.io/ikmedia/women-dress-2.jpg">
-            {(loaded) => <img src={loaded.src} />}
+            {(image) => <img src={image.src} />}
           </Load>
         </Suspense.CSROnly>
       </Area>
