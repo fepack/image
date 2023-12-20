@@ -15,14 +15,14 @@ export default function Home() {
       <ErrorBoundary fallback={() => <>load image error</>}>
         <Suspense.CSROnly fallback={<Spinner />}>
           <Load src="https://ik.imagekit.io/ikmedia/women-dress-2.jpg">
-            {(loadedImage) => <img src={loadedImage.src} />}
+            {(image) => <img src={image.src} />}
           </Load>
         </Suspense.CSROnly>
       </ErrorBoundary>
       <ErrorBoundary fallback={() => <>load image error</>}>
         <Suspense.CSROnly fallback={<Spinner />}>
           <Load src="https://ik.imagekit.io/ikmedia/wome">
-            {(loadedImage) => <img src={loadedImage.src} />}
+            {(image) => <img src={image.src} />}
           </Load>
         </Suspense.CSROnly>
       </ErrorBoundary>
@@ -35,16 +35,16 @@ export default function Home() {
 
       <Suspense.CSROnly fallback={"image loading..."}>
         <Load src={"/images/test.png"}>
-          {(loadedImage) => (
+          {(image) => (
             <div
               style={{
-                width: loadedImage.width * size,
-                height: loadedImage.height * size,
+                width: image.width * size,
+                height: image.height * size,
                 display: "flex",
                 flexWrap: "wrap",
               }}
             >
-              {extractRGBAs(loadedImage).map((rgba, index) => (
+              {extractRGBAs(image).map((rgba, index) => (
                 <div
                   key={index}
                   style={{
