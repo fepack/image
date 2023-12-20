@@ -30,6 +30,6 @@ jobs:
           node-version-file: ".nvmrc"
       - run: pnpm install --frozen-lockfile
       - if: matrix.command == 'test'
-        run: pnpx exec playwright install
+        run: pnpm exec playwright install
       - run: pnpm prepack
       - run: pnpm ${{ matrix.command }}
