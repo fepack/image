@@ -50,12 +50,12 @@
     "@fepack/image": "workspace:*"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^13.4.0",
     "@types/node": "^18.16.2",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.1",
-    "@types/testing-library__jest-dom": "^5.14.5",
+    "@types/testing-library__jest-dom": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
