@@ -1,5 +1,13 @@
 # @fepack/react-image
 
+## 0.2.6
+
+### Patch Changes
+
+- a9d5fff: fix(react-image): change Load to return loaded HTMLImageElement
+- Updated dependencies [a9d5fff]
+  - @fepack/image@0.2.6
+
 ## 0.2.5
 
 ### Patch Changes
