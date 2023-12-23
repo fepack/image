@@ -1,28 +1,26 @@
 type RGBA = readonly [number, number, number, number];
-type ExtractRGBAsOptions = { quality: number };
-const initialOptions: ExtractRGBAsOptions = { quality: 100 };
+type RGBAProcessor = (rgbaArray: RGBA[]) => RGBA[];
+type ExtractRGBAsOptions = { quality?: number; unique?: boolean };
+const initialOptions: ExtractRGBAsOptions = {
+  quality: 100,
+  unique: false,
+};
 
 /**
  * Filters and extracts relevant pixels from image data based on quality setting.
  * @param image - The image data.
  * @param [options] - The options to define the quality of extraction.
- * @throws Will throw an error if quality is not between 1 and 100.
  * @returns An array of RGBA values.
  */
 export const extractRGBAs = (
   image: HTMLImageElement,
   options = initialOptions,
 ) => {
-  if (options.quality < 1 || options.quality > 100) {
-    throw new Error("options.quality should be between 1 and 100");
-  }
   const uint8ClampedArray = extractUint8ClampedArray(image);
-  const step = Math.ceil(100 / options.quality);
-
-  return Array.from({
-    length: Math.ceil(uint8ClampedArray.length / (4 * step)),
+  const rgbaArray = Array.from({
+    length: Math.ceil(uint8ClampedArray.length / 4),
   }).map((_, index) => {
-    const rIndex = index * 4 * step;
+    const rIndex = index * 4;
 
     return [
       uint8ClampedArray[rIndex],
@@ -31,6 +29,10 @@ export const extractRGBAs = (
       uint8ClampedArray[rIndex + 3],
     ] as RGBA;
   });
+
+  const pipelineFunctions = [applyQuality(options.quality), applyUnique];
+
+  return pipeline(...pipelineFunctions)(rgbaArray);
 };
 
 /**
@@ -55,4 +57,36 @@ const extractUint8ClampedArray = (image: HTMLImageElement) => {
     canvas.width,
     canvas.height,
   ).data;
+};
+
+const pipeline =
+  (...functions: RGBAProcessor[]) =>
+  (input: RGBA[]) =>
+    functions.reduce((acc, func) => func(acc), input);
+
+const applyQuality =
+  (quality = 100) =>
+  (rgbaArray: RGBA[]) => {
+    if (quality < 1 || quality > 100) {
+      throw new Error("options.quality should be between 1 and 100");
+    }
+
+    const step = Math.ceil(100 / quality);
+
+    return rgbaArray.filter((_, index) => index % step === 0);
+  };
+
+const applyUnique = (rgbaArray: RGBA[]) => {
+  const uniqueSet = new Set<string>();
+
+  return rgbaArray.filter((rgba) => {
+    const key = rgba.join(",");
+    if (!uniqueSet.has(key)) {
+      uniqueSet.add(key);
+
+      return true;
+    }
+
+    return false;
+  });
 };
