@@ -30,12 +30,7 @@ export const extractRGBAs = (
     ] as RGBA;
   });
 
-  const pipelineFunctions = [
-    ...((options.quality as number) < 100
-      ? [applyQuality(options.quality as number)]
-      : []),
-    ...(options.unique ? [applyUnique] : []),
-  ];
+  const pipelineFunctions = [applyQuality(options.quality), applyUnique];
 
   return pipeline(...pipelineFunctions)(rgbaArray);
 };
@@ -69,11 +64,17 @@ const pipeline =
   (input: RGBA[]) =>
     functions.reduce((acc, func) => func(acc), input);
 
-const applyQuality = (quality: number) => (rgbaArray: RGBA[]) => {
-  const step = Math.ceil(100 / quality);
+const applyQuality =
+  (quality = 100) =>
+  (rgbaArray: RGBA[]) => {
+    if (quality < 1 || quality > 100) {
+      throw new Error("options.quality should be between 1 and 100");
+    }
 
-  return rgbaArray.filter((_, index) => index % step === 0);
-};
+    const step = Math.ceil(100 / quality);
+
+    return rgbaArray.filter((_, index) => index % step === 0);
+  };
 
 const applyUnique = (rgbaArray: RGBA[]) => {
   const uniqueSet = new Set<string>();
