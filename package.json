@@ -48,7 +48,7 @@
     "@fepack/tsconfig": "workspace:*",
     "@testing-library/dom": "^9.0.0",
     "@testing-library/jest-dom": "^6.1.5",
-    "@testing-library/react": "^14.1.2",
+    "@testing-library/react": "^14.2.1",
     "@types/node": "^18.19.3",
     "@vitest/browser": "^1.0.4",
     "@vitest/coverage-istanbul": "^1.0.4",
